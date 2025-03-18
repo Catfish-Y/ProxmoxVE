@@ -5,6 +5,8 @@
 # License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
 # Source: https://github.com/ZoeyVid/NPMplus
 
+$STD sed -i 's#https\?://dl-cdn.alpinelinux.org/alpine#https://mirrors.tuna.tsinghua.edu.cn/alpine#g' /etc/apk/repositories
+
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
 color
 verb_ip6
@@ -32,18 +34,18 @@ $STD rc-service docker start
 $STD rc-update add docker default
 
 get_latest_release() {
-    curl -sL https://api.github.com/repos/$1/releases/latest | grep '"tag_name":' | cut -d'"' -f4
+    curl -sL https://github.moeyy.xyz/https://api.github.com/repos/$1/releases/latest | grep '"tag_name":' | cut -d'"' -f4
 }
 DOCKER_COMPOSE_LATEST_VERSION=$(get_latest_release "docker/compose")
 DOCKER_CONFIG=${DOCKER_CONFIG:-$HOME/.docker}
 mkdir -p $DOCKER_CONFIG/cli-plugins
-curl -sSL https://github.com/docker/compose/releases/download/$DOCKER_COMPOSE_LATEST_VERSION/docker-compose-linux-x86_64 -o ~/.docker/cli-plugins/docker-compose
+curl -sSL https://github.moeyy.xyz/https://github.com/docker/compose/releases/download/$DOCKER_COMPOSE_LATEST_VERSION/docker-compose-linux-x86_64 -o ~/.docker/cli-plugins/docker-compose
 chmod +x $DOCKER_CONFIG/cli-plugins/docker-compose
 msg_ok "Installed Docker & Compose"
 
 msg_info "Fetching NPMplus"
 cd /opt
-wget -q https://raw.githubusercontent.com/ZoeyVid/NPMplus/refs/heads/develop/compose.yaml
+wget -q https://github.moeyy.xyz/https://raw.githubusercontent.com/ZoeyVid/NPMplus/refs/heads/develop/compose.yaml
 msg_ok "Fetched NPMplus"
 
 attempts=0
