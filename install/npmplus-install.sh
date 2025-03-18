@@ -34,7 +34,7 @@ $STD rc-service docker start
 $STD rc-update add docker default
 
 get_latest_release() {
-    curl -sL https://github.moeyy.xyz/https://api.github.com/repos/$1/releases/latest | grep '"tag_name":' | cut -d'"' -f4
+    curl -sL https://hacs.catwfish.com/api/repos/$1/releases/latest | grep '"tag_name":' | cut -d'"' -f4
 }
 DOCKER_COMPOSE_LATEST_VERSION=$(get_latest_release "docker/compose")
 DOCKER_CONFIG=${DOCKER_CONFIG:-$HOME/.docker}
