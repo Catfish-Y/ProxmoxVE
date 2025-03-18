@@ -72,6 +72,23 @@ yq -i "
 " /opt/compose.yaml
 
 msg_info "Building and Starting NPMplus (Patience)"
+
+#Set docker mirrors
+$STD mkdir /etc/docker
+$STD cat <<EOF >/etc/docker/daemon.json
+{
+    "registry-mirrors": [
+        "https://dckr.catwfish.com",
+        "https://dockerhub.icu",
+        "https://ghcr.dockerhub.icu",
+        "https://hub.rat.dev",
+        "https://doublezonline.cloud",
+        "https://docker.mrxn.net",
+        "https://dislabaiot.xyz",
+        "https://docker.fxxk.dedyn.io"
+    ]
+}
+EOF
 $STD docker compose up -d
 CONTAINER_ID=""
 for i in {1..60}; do
