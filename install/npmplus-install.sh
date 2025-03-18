@@ -30,26 +30,6 @@ msg_ok "Installed Dependencies"
 
 msg_info "Installing Docker & Compose"
 $STD apk add docker
-
-#---------------------------
-#Set docker mirrors
-$STD mkdir /etc/docker
-$STD cat <<EOF >/etc/docker/daemon.json
-{
-    "registry-mirrors": [
-        "https://dckr.catwfish.com",
-        "https://dockerhub.icu",
-        "https://ghcr.dockerhub.icu",
-        "https://hub.rat.dev",
-        "https://doublezonline.cloud",
-        "https://docker.mrxn.net",
-        "https://dislabaiot.xyz",
-        "https://docker.fxxk.dedyn.io"
-    ]
-}
-EOF
-#--------------------------
-
 $STD rc-service docker start
 $STD rc-update add docker default
 
@@ -66,6 +46,10 @@ msg_ok "Installed Docker & Compose"
 msg_info "Fetching NPMplus"
 cd /opt
 wget -q https://github.moeyy.xyz/https://raw.githubusercontent.com/ZoeyVid/NPMplus/refs/heads/develop/compose.yaml
+
+$STD sed -i 's#ghcr.io#ghcr.nju.edu.cn#g' /opt/compose.yaml
+$STD sed -i 's#docker.io#dckr.catwfish.com#g' /opt/compose.yaml
+
 msg_ok "Fetched NPMplus"
 
 attempts=0
