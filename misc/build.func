@@ -18,7 +18,7 @@ variables() {
 source <(curl -fsSL https://git.community-scripts.org/community-scripts/ProxmoxVE/raw/branch/main/misc/api.func)
 
 if command -v curl >/dev/null 2>&1; then
-  source <(curl -fsSL https://main/misc/core.func)
+  source <(curl -fsSL https://https://git.community-scripts.org/community-scripts/ProxmoxVE/raw/branch/main/misc/core.func)
   load_functions
 elif command -v wget >/dev/null 2>&1; then
   source <(wget -qO- https://git.community-scripts.org/community-scripts/ProxmoxVE/raw/branch/main/misc/core.func)
