@@ -4307,8 +4307,8 @@ EOF
   if [ "$var_os" == "alpine" ]; then
     sleep 3
     pct exec "$CTID" -- /bin/sh -c 'cat <<EOF >/etc/apk/repositories
-https://dl-cdn.alpinelinux.org/alpine/latest-stable/main
-https://dl-cdn.alpinelinux.org/alpine/latest-stable/community
+https://mirrors.tuna.tsinghua.edu.cn/alpine/latest-stable/main
+https://mirrors.tuna.tsinghua.edu.cn/alpine/latest-stable/community
 EOF'
     pct exec "$CTID" -- ash -c "apk add bash newt curl openssh nano mc ncurses jq" >>"$BUILD_LOG" 2>&1 || {
       msg_warn "apk install failed (dl-cdn.alpinelinux.org), trying alternate mirrors..."
