@@ -2,8 +2,8 @@
 
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: miviro
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://github.com/heiher/hev-socks5-server
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://gh-proxy.org/https://github.com/heiher/hev-socks5-server
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
 color
@@ -17,7 +17,7 @@ fetch_and_deploy_gh_release "hev-socks5-server" "heiher/hev-socks5-server" "sing
 
 msg_info "Setup hev-socks5-server"
 mkdir -p /etc/hev-socks5-server
-download_file "https://raw.githubusercontent.com/heiher/hev-socks5-server/refs/heads/main/conf/main.yml" "/etc/hev-socks5-server/main.yml"
+download_file "https://gh-proxy.org/https://raw.githubusercontent.com/heiher/hev-socks5-server/refs/heads/main/conf/main.yml" "/etc/hev-socks5-server/main.yml"
 sed -i 's/^#auth:/auth:/; s/^# file: conf\/auth.txt/  file: \/root\/hev.creds/'  /etc/hev-socks5-server/main.yml
 PASSWORD=$(openssl rand -base64 16)
 echo "admin $PASSWORD 0" >/root/hev.creds

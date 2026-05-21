@@ -2,8 +2,8 @@
 
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: MickLesk (CanbiZ)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://www.grampsweb.org/ | Github: https://github.com/gramps-project/gramps-web
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://www.grampsweb.org/ | Github: https://gh-proxy.org/https://github.com/gramps-project/gramps-web
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
 color
@@ -82,7 +82,7 @@ GRAMPS_PLUGINS_DIR="/opt/gramps-web/data/gramps/gramps${GRAMPS_VERSION}/plugins"
 mkdir -p "$GRAMPS_PLUGINS_DIR"
 
 msg_info "Installing Gramps Addons (gramps${GRAMPS_VERSION})"
-$STD wget -q https://github.com/gramps-project/addons/archive/refs/heads/master.zip -O /tmp/gramps-addons.zip
+$STD wget -q https://gh-proxy.org/https://github.com/gramps-project/addons/archive/refs/heads/master.zip -O /tmp/gramps-addons.zip
 for addon in FilterRules JSON; do
   unzip -p /tmp/gramps-addons.zip "addons-master/gramps${GRAMPS_VERSION}/download/${addon}.addon.tgz" | \
     tar -xz -C "$GRAMPS_PLUGINS_DIR"

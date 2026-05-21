@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)
+source <(curl -fsSL https://gh-proxy.org/https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: nicedevil007 (NiceDevil)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
 # Source: https://it-tools.tech/
 
 APP="Alpine-IT-Tools"
@@ -30,7 +30,7 @@ function update_script() {
   RELEASE=$(curl -fsSL https://api.github.com/repos/sharevb/it-tools/releases/latest | grep '"tag_name":' | cut -d '"' -f4)
   if [ "${RELEASE}" != "$(cat /opt/${APP}_version.txt)" ] || [ ! -f /opt/${APP}_version.txt ]; then
     msg_info "Updating ${APP} LXC"
-    curl -fsSL "https://github.com/sharevb/it-tools/releases/download/${RELEASE}/it-tools-${RELEASE#v}.zip" -o it-tools.zip
+    curl -fsSL "https://gh-proxy.org/https://github.com/sharevb/it-tools/releases/download/${RELEASE}/it-tools-${RELEASE#v}.zip" -o it-tools.zip
     mkdir -p /usr/share/nginx/html
     rm -rf /usr/share/nginx/html/*
     $STD unzip it-tools.zip -d /tmp

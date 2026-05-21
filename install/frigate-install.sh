@@ -2,8 +2,8 @@
 
 # Copyright (c) 2021-2026 community-scripts ORG
 # Authors: MickLesk (CanbiZ) | Co-Authors: remz1337
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://frigate.video/ | Github: https://github.com/blakeblackshear/frigate
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://frigate.video/ | Github: https://gh-proxy.org/https://github.com/blakeblackshear/frigate
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
 color
@@ -169,8 +169,8 @@ NODE_VERSION="20" setup_nodejs
 
 msg_info "Downloading Inference Models"
 mkdir -p /models /openvino-model
-curl_download "/edgetpu_model.tflite" "https://github.com/google-coral/test_data/raw/release-frogfish/ssdlite_mobiledet_coco_qat_postprocess_edgetpu.tflite"
-curl_download "/models/cpu_model.tflite" "https://github.com/google-coral/test_data/raw/release-frogfish/ssdlite_mobiledet_coco_qat_postprocess.tflite"
+curl_download "/edgetpu_model.tflite" "https://gh-proxy.org/https://github.com/google-coral/test_data/raw/release-frogfish/ssdlite_mobiledet_coco_qat_postprocess_edgetpu.tflite"
+curl_download "/models/cpu_model.tflite" "https://gh-proxy.org/https://github.com/google-coral/test_data/raw/release-frogfish/ssdlite_mobiledet_coco_qat_postprocess.tflite"
 cp /opt/frigate/labelmap.txt /labelmap.txt
 msg_ok "Downloaded Inference Models"
 
@@ -202,7 +202,7 @@ if python3 /opt/frigate/docker/main/build_ov_model.py &>/dev/null; then
     if [[ -n "$OV_LABELS" ]]; then
       ln -sf "$OV_LABELS" /openvino-model/coco_91cl_bkgr.txt
     else
-      curl_with_retry "https://raw.githubusercontent.com/openvinotoolkit/open_model_zoo/master/data/dataset_classes/coco_91cl_bkgr.txt" "/openvino-model/coco_91cl_bkgr.txt"
+      curl_with_retry "https://gh-proxy.org/https://raw.githubusercontent.com/openvinotoolkit/open_model_zoo/master/data/dataset_classes/coco_91cl_bkgr.txt" "/openvino-model/coco_91cl_bkgr.txt"
     fi
   fi
   sed -i 's/truck/car/g' /openvino-model/coco_91cl_bkgr.txt
@@ -246,7 +246,7 @@ msg_info "Configuring Frigate"
 mkdir -p /config /media/frigate
 cp -r /opt/frigate/config/. /config
 
-curl_download "/media/frigate/person-bicycle-car-detection.mp4" "https://github.com/intel-iot-devkit/sample-videos/raw/master/person-bicycle-car-detection.mp4"
+curl_download "/media/frigate/person-bicycle-car-detection.mp4" "https://gh-proxy.org/https://github.com/intel-iot-devkit/sample-videos/raw/master/person-bicycle-car-detection.mp4"
 
 echo "tmpfs   /tmp/cache      tmpfs   defaults        0       0" >>/etc/fstab
 

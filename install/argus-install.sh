@@ -2,8 +2,8 @@
 
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: MickLesk (CanbiZ)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://release-argus.io/ | Github: https://github.com/release-argus/Argus
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://release-argus.io/ | Github: https://gh-proxy.org/https://github.com/release-argus/Argus
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
 color
@@ -47,9 +47,9 @@ service:
       type: github
       url: release-argus/argus
     dashboard:
-      icon: https://raw.githubusercontent.com/release-argus/Argus/master/web/ui/react-app/public/favicon.svg
+      icon: https://gh-proxy.org/https://raw.githubusercontent.com/release-argus/Argus/master/web/ui/react-app/public/favicon.svg
       icon_link_to: https://release-argus.io
-      web_url: https://github.com/release-argus/Argus/blob/master/CHANGELOG.md
+      web_url: https://gh-proxy.org/https://github.com/release-argus/Argus/blob/master/CHANGELOG.md
 
   community-scripts/ProxmoxVE:
     latest_version:
@@ -57,9 +57,9 @@ service:
       url: community-scripts/ProxmoxVE
       use_prerelease: false
     dashboard:
-      icon: https://raw.githubusercontent.com/community-scripts/ProxmoxVE/refs/heads/main/misc/images/logo.png
+      icon: https://gh-proxy.org/https://raw.githubusercontent.com/community-scripts/ProxmoxVE/refs/heads/main/misc/images/logo.png
       icon_link_to: https://community-scripts.org/
-      web_url: https://github.com/community-scripts/ProxmoxVE/releases
+      web_url: https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/releases
 EOF
 msg_ok "Setup Config"
 

@@ -2,8 +2,8 @@
 
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: vhsdream
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://immich.app | Github: https://github.com/immich-app/immich
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://immich.app | Github: https://gh-proxy.org/https://github.com/immich-app/immich
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
 color
@@ -33,7 +33,7 @@ if lscpu | grep -q 'GenuineIntel'; then
       msg_info "Installing Intel OpenVINO dependencies"
       tmp_dir=$(mktemp -d)
       $STD pushd "$tmp_dir"
-      curl_with_retry "https://raw.githubusercontent.com/immich-app/immich/refs/heads/main/machine-learning/Dockerfile" "Dockerfile"
+      curl_with_retry "https://gh-proxy.org/https://raw.githubusercontent.com/immich-app/immich/refs/heads/main/machine-learning/Dockerfile" "Dockerfile"
       readarray -t INTEL_URLS < <(
         sed -n "/intel-[igc|opencl]/p" ./Dockerfile | awk '{print $3}'
         sed -n "/libigdgmm12/p" ./Dockerfile | awk '{print $3}'
@@ -164,7 +164,7 @@ msg_warn "Compiling Custom Photo-processing Libraries (can take anywhere from 15
 LD_LIBRARY_PATH=/usr/local/lib
 export LD_RUN_PATH=/usr/local/lib
 STAGING_DIR=/opt/staging
-BASE_REPO="https://github.com/immich-app/base-images"
+BASE_REPO="https://gh-proxy.org/https://github.com/immich-app/base-images"
 BASE_DIR=${STAGING_DIR}/base-images
 SOURCE_DIR=${STAGING_DIR}/image-source
 $STD git clone -b main "$BASE_REPO" "$BASE_DIR"
@@ -177,7 +177,7 @@ JPEGLI_LIBJPEG_LIBRARY_SOVERSION="62"
 JPEGLI_LIBJPEG_LIBRARY_VERSION="62.3.0"
 LIBJXL_REVISION="794a5dcf0d54f9f0b20d288a12e87afb91d20dfc"
 # : "${LIBJXL_REVISION:=$(jq -cr '.revision' $BASE_DIR/server/sources/libjxl.json)}"
-$STD git clone https://github.com/libjxl/libjxl.git "$SOURCE"
+$STD git clone https://gh-proxy.org/https://github.com/libjxl/libjxl.git "$SOURCE"
 cd "$SOURCE"
 $STD git reset --hard "$LIBJXL_REVISION"
 $STD git submodule update --init --recursive --depth 1 --recommend-shallow
@@ -215,7 +215,7 @@ msg_info "(2/5) Compiling libheif"
 SOURCE=${SOURCE_DIR}/libheif
 LIBHEIF_REVISION="35dad50a9145332a7bfdf1ff6aef6801fb613d68"
 # : "${LIBHEIF_REVISION:=$(jq -cr '.revision' $BASE_DIR/server/sources/libheif.json)}"
-$STD git clone https://github.com/strukturag/libheif.git "$SOURCE"
+$STD git clone https://gh-proxy.org/https://github.com/strukturag/libheif.git "$SOURCE"
 cd "$SOURCE"
 $STD git reset --hard "$LIBHEIF_REVISION"
 mkdir build
@@ -241,7 +241,7 @@ msg_info "(3/5) Compiling libraw"
 SOURCE=${SOURCE_DIR}/libraw
 LIBRAW_REVISION="0b56545a4f828743f28a4345cdfdd4c49f9f9a2a"
 # : "${LIBRAW_REVISION:=$(jq -cr '.revision' $BASE_DIR/server/sources/libraw.json)}"
-$STD git clone https://github.com/LibRaw/LibRaw.git "$SOURCE"
+$STD git clone https://gh-proxy.org/https://github.com/LibRaw/LibRaw.git "$SOURCE"
 cd "$SOURCE"
 $STD git reset --hard "$LIBRAW_REVISION"
 $STD autoreconf --install
@@ -256,7 +256,7 @@ msg_ok "(3/5) Compiled libraw"
 msg_info "(4/5) Compiling imagemagick"
 SOURCE=$SOURCE_DIR/imagemagick
 : "${IMAGEMAGICK_REVISION:=$(jq -cr '.revision' $BASE_DIR/server/sources/imagemagick.json)}"
-$STD git clone https://github.com/ImageMagick/ImageMagick.git "$SOURCE"
+$STD git clone https://gh-proxy.org/https://github.com/ImageMagick/ImageMagick.git "$SOURCE"
 cd "$SOURCE"
 $STD git reset --hard "$IMAGEMAGICK_REVISION"
 $STD ./configure --with-modules CPPFLAGS="-DMAGICK_LIBRAW_VERSION_TAIL=202502"
@@ -270,7 +270,7 @@ msg_ok "(4/5) Compiled imagemagick"
 msg_info "(5/5) Compiling libvips"
 SOURCE=$SOURCE_DIR/libvips
 LIBVIPS_REVISION="0c9151a4f416d2f8ae20a755db218f6637050eec"
-$STD git clone https://github.com/libvips/libvips.git "$SOURCE"
+$STD git clone https://gh-proxy.org/https://github.com/libvips/libvips.git "$SOURCE"
 cd "$SOURCE"
 $STD git reset --hard "$LIBVIPS_REVISION"
 $STD meson setup build --buildtype=release --libdir=lib -Dintrospection=disabled -Dtiff=disabled
@@ -407,7 +407,7 @@ cd "$GEO_DIR"
 curl_with_retry "https://download.geonames.org/export/dump/admin1CodesASCII.txt" "admin1CodesASCII.txt"
 curl_with_retry "https://download.geonames.org/export/dump/admin2Codes.txt" "admin2Codes.txt"
 curl_with_retry "https://download.geonames.org/export/dump/cities500.zip" "cities500.zip"
-curl_with_retry "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_admin_0_countries.geojson" "ne_10m_admin_0_countries.geojson"
+curl_with_retry "https://gh-proxy.org/https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_admin_0_countries.geojson" "ne_10m_admin_0_countries.geojson"
 unzip -q cities500.zip
 date --iso-8601=seconds | tr -d "\n" >geodata-date.txt
 rm cities500.zip

@@ -2,8 +2,8 @@
 
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: bvdberg01
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://netboxlabs.com/ | Github: https://github.com/netbox-community/netbox
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://netboxlabs.com/ | Github: https://gh-proxy.org/https://github.com/netbox-community/netbox
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
 color

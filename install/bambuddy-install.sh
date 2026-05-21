@@ -2,8 +2,8 @@
 
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: Adrian-RDA
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://github.com/maziggy/bambuddy
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://gh-proxy.org/https://github.com/maziggy/bambuddy
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
 color
@@ -46,7 +46,7 @@ msg_info "Creating Service"
 cat <<EOF >/etc/systemd/system/bambuddy.service
 [Unit]
 Description=Bambuddy - Bambu Lab Print Management
-Documentation=https://github.com/maziggy/bambuddy
+Documentation=https://gh-proxy.org/https://github.com/maziggy/bambuddy
 After=network.target
 
 [Service]

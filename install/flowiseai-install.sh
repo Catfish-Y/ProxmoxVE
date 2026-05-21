@@ -2,8 +2,8 @@
 
 # Copyright (c) 2021-2026 tteck
 # Author: tteck (tteckster)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://flowiseai.com/ | Github: https://github.com/FlowiseAI/Flowise
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://flowiseai.com/ | Github: https://gh-proxy.org/https://github.com/FlowiseAI/Flowise
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
 color
@@ -26,7 +26,7 @@ $STD npm install -g flowise \
   @opentelemetry/sdk-trace-node \
   langchainhub
 mkdir -p /opt/flowiseai
-curl -fsSL "https://raw.githubusercontent.com/FlowiseAI/Flowise/main/packages/server/.env.example" -o "/opt/flowiseai/.env"
+curl -fsSL "https://gh-proxy.org/https://raw.githubusercontent.com/FlowiseAI/Flowise/main/packages/server/.env.example" -o "/opt/flowiseai/.env"
 msg_ok "Installed FlowiseAI"
 
 msg_info "Creating Service"

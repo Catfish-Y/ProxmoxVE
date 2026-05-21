@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)
+source <(curl -fsSL https://gh-proxy.org/https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: kristocopani
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://lubelogger.com/ | Github: https://github.com/hargata/lubelog
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://lubelogger.com/ | Github: https://gh-proxy.org/https://github.com/hargata/lubelog
 
 APP="LubeLogger"
 var_tags="${var_tags:-vehicle;car}"
@@ -38,7 +38,7 @@ function update_script() {
     cp -r /opt/lubelogger/data/ /tmp/lubeloggerData/
 
     # Lubelogger has moved multiples folders to the 'data' folder, and we need to move them before the update to keep the user data
-    # Github Discussion: https://github.com/hargata/lubelog/discussions/787
+    # Github Discussion: https://gh-proxy.org/https://github.com/hargata/lubelog/discussions/787
     [[ -e /opt/lubelogger/config ]] && cp -r /opt/lubelogger/config /tmp/lubeloggerData/data/
     [[ -e /opt/lubelogger/wwwroot/translations ]] && cp -r /opt/lubelogger/wwwroot/translations /tmp/lubeloggerData/data/
     [[ -e /opt/lubelogger/wwwroot/documents ]] && cp -r /opt/lubelogger/wwwroot/documents /tmp/lubeloggerData/data/

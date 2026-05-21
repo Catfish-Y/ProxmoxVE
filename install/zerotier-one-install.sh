@@ -2,7 +2,7 @@
 
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: tremor021
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
 # Source: https://www.zerotier.com/
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
@@ -25,7 +25,7 @@ if [[ ! $CONFIRM =~ ^([yY][eE][sS]|[yY])$ ]]; then
 fi
 
 msg_info "Setting up Zerotier-One"
-curl -fsSL https://raw.githubusercontent.com/zerotier/ZeroTierOne/main/doc/contact%40zerotier.com.gpg | gpg --import >/dev/null 2>&1
+curl -fsSL https://gh-proxy.org/https://raw.githubusercontent.com/zerotier/ZeroTierOne/main/doc/contact%40zerotier.com.gpg | gpg --import >/dev/null 2>&1
 curl -fsSL https://install.zerotier.com -o /tmp/zerotier-install.sh
 if gpg --verify /tmp/zerotier-install.sh >/dev/null 2>&1; then
   $STD bash /tmp/zerotier-install.sh

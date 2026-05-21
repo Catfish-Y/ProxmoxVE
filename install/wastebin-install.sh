@@ -2,8 +2,8 @@
 
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: MickLesk (Canbiz)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://github.com/matze/wastebin
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://gh-proxy.org/https://github.com/matze/wastebin
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
 color
@@ -20,7 +20,7 @@ msg_ok "Installed dependencies"
 msg_info "Installing Wastebin"
 temp_file=$(mktemp)
 RELEASE=$(curl -fsSL https://api.github.com/repos/matze/wastebin/releases/latest | grep "tag_name" | awk '{print substr($2, 2, length($2)-3) }')
-curl -fsSL "https://github.com/matze/wastebin/releases/download/${RELEASE}/wastebin_${RELEASE}_x86_64-unknown-linux-musl.tar.zst" -o "$temp_file"
+curl -fsSL "https://gh-proxy.org/https://github.com/matze/wastebin/releases/download/${RELEASE}/wastebin_${RELEASE}_x86_64-unknown-linux-musl.tar.zst" -o "$temp_file"
 tar -xf "$temp_file"
 mkdir -p /opt/wastebin
 mv wastebin* /opt/wastebin/

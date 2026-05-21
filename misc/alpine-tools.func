@@ -169,7 +169,7 @@ fetch_and_deploy_gh() {
   case "$mode" in
   tarball | source)
     url="$(printf '%s' "$json" | jq -r '.tarball_url // empty')"
-    [ -z "$url" ] && url="https://github.com/$repo/archive/refs/tags/v$version.tar.gz"
+    [ -z "$url" ] && url="https://gh-proxy.org/https://github.com/$repo/archive/refs/tags/v$version.tar.gz"
     filename="${app_lc}-${version}.tar.gz"
     download_with_progress "$url" "$tmpd/$filename" || {
       rm -rf "$tmpd"
@@ -301,7 +301,7 @@ setup_yq() {
     return 238
     ;;
   esac
-  url="https://github.com/mikefarah/yq/releases/latest/download/yq_linux_${arch}"
+  url="https://gh-proxy.org/https://github.com/mikefarah/yq/releases/latest/download/yq_linux_${arch}"
   tmp="$(mktemp)"
   download_with_progress "$url" "$tmp" || return 250
   /usr/bin/install -m 0755 "$tmp" /usr/local/bin/yq
@@ -316,7 +316,7 @@ setup_adminer() {
   need_tool curl || return 127
   msg_info "Setup Adminer (Alpine)"
   mkdir -p /var/www/localhost/htdocs/adminer
-  curl -fsSL https://github.com/vrana/adminer/releases/latest/download/adminer.php \
+  curl -fsSL https://gh-proxy.org/https://github.com/vrana/adminer/releases/latest/download/adminer.php \
     -o /var/www/localhost/htdocs/adminer/index.php || {
     msg_error "Adminer download failed"
     return 250
@@ -362,7 +362,7 @@ setup_uv() {
 
   tmpd="$(mktemp -d)" || return 252
   tarball="uv-${arch}.tar.gz"
-  url="https://github.com/astral-sh/uv/releases/download/v${ver}/${tarball}"
+  url="https://gh-proxy.org/https://github.com/astral-sh/uv/releases/download/v${ver}/${tarball}"
 
   download_with_progress "$url" "$tmpd/uv.tar.gz" || {
     rm -rf "$tmpd"

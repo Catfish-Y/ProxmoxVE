@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)
+source <(curl -fsSL https://gh-proxy.org/https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)
 # Copyright (c) 2021-2026 tteck
 # Author: MickLesk (Canbiz)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://github.com/matze/wastebin
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://gh-proxy.org/https://github.com/matze/wastebin
 
 APP="Wastebin"
 var_tags="${var_tags:-file;code}"
@@ -65,7 +65,7 @@ EOF
 
     msg_info "Updating Wastebin"
     temp_file=$(mktemp)
-    curl -fsSL "https://github.com/matze/wastebin/releases/download/${RELEASE}/wastebin_${RELEASE}_x86_64-unknown-linux-musl.tar.zst" -o "$temp_file"
+    curl -fsSL "https://gh-proxy.org/https://github.com/matze/wastebin/releases/download/${RELEASE}/wastebin_${RELEASE}_x86_64-unknown-linux-musl.tar.zst" -o "$temp_file"
     tar -xf "$temp_file"
     cp -f wastebin* /opt/wastebin/
     chmod +x /opt/wastebin/wastebin

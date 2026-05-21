@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)
+source <(curl -fsSL https://gh-proxy.org/https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)
 # Copyright (c) 2021-2026 tteck
 # Author: tteck (tteckster)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
 # Source: https://www.home-assistant.io/
 
 APP="Podman-Home Assistant"
@@ -65,7 +65,7 @@ function update_script() {
   fi
   if [ "$UPD" == "3" ]; then
     msg_info "Installing FileBrowser"
-    $STD curl -fsSL https://raw.githubusercontent.com/filebrowser/get/master/get.sh | bash
+    $STD curl -fsSL https://gh-proxy.org/https://raw.githubusercontent.com/filebrowser/get/master/get.sh | bash
     $STD filebrowser config init -a '0.0.0.0'
     $STD filebrowser config set -a '0.0.0.0'
     $STD filebrowser users add admin community-scripts.org --perm.admin

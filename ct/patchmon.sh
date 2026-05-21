@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)
+source <(curl -fsSL https://gh-proxy.org/https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: vhsdream
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://github.com/PatchMon/PatchMon
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://gh-proxy.org/https://github.com/PatchMon/PatchMon
 
 APP="PatchMon"
 var_tags="${var_tags:-monitoring}"
@@ -78,7 +78,7 @@ function update_script() {
     msg_info "Fetching PatchMon agent binaries"
     RELEASE=$(get_latest_github_release "PatchMon/PatchMon")
     [[ ! -d /opt/patchmon/agents ]] && mkdir -p /opt/patchmon/agents
-    FILE_URL="https://github.com/PatchMon/PatchMon/releases/download/v${RELEASE}/patchmon-agent-"
+    FILE_URL="https://gh-proxy.org/https://github.com/PatchMon/PatchMon/releases/download/v${RELEASE}/patchmon-agent-"
     AGENT_NAME=(
       "linux-amd64"
       "linux-arm64"

@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)
+source <(curl -fsSL https://gh-proxy.org/https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: Slaviša Arežina (tremor021) | Co-Author: Stavros (steveiliop56)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://github.com/tinyauthapp/tinyauth
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://gh-proxy.org/https://github.com/tinyauthapp/tinyauth
 
 APP="Alpine-Tinyauth"
 var_tags="${var_tags:-alpine;auth}"
@@ -51,7 +51,7 @@ function update_script() {
 
     msg_info "Updating Tinyauth"
     rm -f /opt/tinyauth/tinyauth
-    curl -fsSL "https://github.com/tinyauthapp/tinyauth/releases/download/v${RELEASE}/tinyauth-amd64" -o /opt/tinyauth/tinyauth
+    curl -fsSL "https://gh-proxy.org/https://github.com/tinyauthapp/tinyauth/releases/download/v${RELEASE}/tinyauth-amd64" -o /opt/tinyauth/tinyauth
     chmod +x /opt/tinyauth/tinyauth
     echo "${RELEASE}" >~/.tinyauth
     msg_ok "Updated Tinyauth"

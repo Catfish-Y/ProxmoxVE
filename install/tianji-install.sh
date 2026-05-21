@@ -3,8 +3,8 @@
 # Copyright (c) 2021-2026 tteck
 # Author: tteck
 # Co-Author: MickLesk (Canbiz)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://github.com/msgbyte/tianji
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://gh-proxy.org/https://github.com/msgbyte/tianji
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
 color
@@ -22,7 +22,7 @@ $STD apt install -y \
   git
 msg_ok "Installed Dependencies"
 
-NODE_VERSION="22" NODE_MODULE="pnpm@$(curl -s https://raw.githubusercontent.com/msgbyte/tianji/master/package.json | jq -r '.packageManager | split("@")[1]')" setup_nodejs
+NODE_VERSION="22" NODE_MODULE="pnpm@$(curl -s https://gh-proxy.org/https://raw.githubusercontent.com/msgbyte/tianji/master/package.json | jq -r '.packageManager | split("@")[1]')" setup_nodejs
 PG_VERSION="17" setup_postgresql
 PG_DB_NAME="tianji_db" PG_DB_USER="tianji" setup_postgresql_db
 PYTHON_VERSION="3.13" setup_uv

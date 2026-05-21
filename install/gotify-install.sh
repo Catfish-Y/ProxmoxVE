@@ -2,8 +2,8 @@
 
 # Copyright (c) 2021-2026 tteck
 # Author: tteck (tteckster)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://gotify.net/ | Github: https://github.com/gotify/server
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://gotify.net/ | Github: https://gh-proxy.org/https://github.com/gotify/server
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
 color

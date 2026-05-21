@@ -2,8 +2,8 @@
 
 # Copyright (c) 2021-2026 tteck
 # Author: tteck (tteckster)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://docs.olivetin.app/ | Github: https://github.com/OliveTin/OliveTin
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://docs.olivetin.app/ | Github: https://gh-proxy.org/https://github.com/OliveTin/OliveTin
 
 function header_info {
   clear
@@ -29,7 +29,7 @@ APP="OliveTin"
 hostname="$(hostname)"
 
 # Telemetry
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/api.func) 2>/dev/null || true
+source <(curl -fsSL https://gh-proxy.org/https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/api.func) 2>/dev/null || true
 declare -f init_tool_telemetry &>/dev/null && init_tool_telemetry "olivetin" "addon"
 
 set-e
@@ -60,7 +60,7 @@ if ! command -v curl &>/dev/null; then
   apt-get update >/dev/null 2>&1
   apt-get install -y curl >/dev/null 2>&1
 fi
-curl -fsSL "https://github.com/OliveTin/OliveTin/releases/latest/download/OliveTin_linux_amd64.deb" -o $(basename "https://github.com/OliveTin/OliveTin/releases/latest/download/OliveTin_linux_amd64.deb")
+curl -fsSL "https://gh-proxy.org/https://github.com/OliveTin/OliveTin/releases/latest/download/OliveTin_linux_amd64.deb" -o $(basename "https://gh-proxy.org/https://github.com/OliveTin/OliveTin/releases/latest/download/OliveTin_linux_amd64.deb")
 dpkg -i OliveTin_linux_amd64.deb &>/dev/null
 systemctl enable --now OliveTin &>/dev/null
 rm OliveTin_linux_amd64.deb

@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)
+source <(curl -fsSL https://gh-proxy.org/https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: bvdberg01
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://github.com/pterodactyl/panel
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://gh-proxy.org/https://github.com/pterodactyl/panel
 
 APP="Pterodactyl-Panel"
 var_tags="${var_tags:-gaming}"
@@ -62,7 +62,7 @@ EOF
     msg_info "Updating ${APP} to v${RELEASE}"
     cp -r /opt/pterodactyl-panel/.env /opt/
     rm -rf * .*
-    curl -fsSL "https://github.com/pterodactyl/panel/releases/download/v${RELEASE}/panel.tar.gz" -o $(basename "https://github.com/pterodactyl/panel/releases/download/v${RELEASE}/panel.tar.gz")
+    curl -fsSL "https://gh-proxy.org/https://github.com/pterodactyl/panel/releases/download/v${RELEASE}/panel.tar.gz" -o $(basename "https://gh-proxy.org/https://github.com/pterodactyl/panel/releases/download/v${RELEASE}/panel.tar.gz")
     tar -xzf "panel.tar.gz"
     mv /opt/.env /opt/pterodactyl-panel/
     $STD composer install --no-dev --optimize-autoloader --no-interaction

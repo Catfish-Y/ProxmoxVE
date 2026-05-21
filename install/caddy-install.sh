@@ -2,8 +2,8 @@
 
 # Copyright (c) 2021-2026 tteck
 # Author: tteck (tteckster) | Co-Author: MickLesk (CanbiZ)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://caddyserver.com/ | Github: https://github.com/caddyserver/caddy
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://caddyserver.com/ | Github: https://gh-proxy.org/https://github.com/caddyserver/caddy
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
 color

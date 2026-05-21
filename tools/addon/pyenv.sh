@@ -2,8 +2,8 @@
 
 # Copyright (c) 2021-2026 tteck
 # Author: tteck (tteckster)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://pyenv.run/ | Github: https://github.com/pyenv/pyenv
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://pyenv.run/ | Github: https://gh-proxy.org/https://github.com/pyenv/pyenv
 
 set -e
 YW=$(echo "\033[33m")
@@ -30,7 +30,7 @@ function msg_error() {
 }
 
 # Telemetry
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/api.func) 2>/dev/null || true
+source <(curl -fsSL https://gh-proxy.org/https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/api.func) 2>/dev/null || true
 declare -f init_tool_telemetry &>/dev/null && init_tool_telemetry "pyenv" "addon"
 
 if command -v pveversion >/dev/null 2>&1; then
@@ -64,7 +64,7 @@ apt-get install -y \
   libturbojpeg0-dev \
   liblzma-dev &>/dev/null
 
-git clone https://github.com/pyenv/pyenv.git ~/.pyenv &>/dev/null
+git clone https://gh-proxy.org/https://github.com/pyenv/pyenv.git ~/.pyenv &>/dev/null
 set +e
 echo 'export PYENV_ROOT="$HOME/.pyenv"' >>~/.bashrc
 echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >>~/.bashrc
@@ -121,7 +121,7 @@ if [[ "${prompt,,}" =~ ^(y|yes)$ ]]; then
 # Copyright (c) 2021-2026 tteck
 # Author: tteck (tteckster)
 # License: MIT
-# https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
 
 source /srv/esphome/bin/activate
 esphome dashboard /srv/esphome/

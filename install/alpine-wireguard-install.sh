@@ -2,7 +2,7 @@
 
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: MickLesk (CanbiZ)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
 # Source: https://www.wireguard.com/
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
@@ -54,7 +54,7 @@ if [[ "$INSTALL_WGD" =~ ^[Yy]$ ]]; then
     python3-dev
   msg_ok "Installed additional dependencies for WGDashboard"
   msg_info "Installing WGDashboard"
-  git clone -q https://github.com/WGDashboard/WGDashboard.git /etc/wgdashboard
+  git clone -q https://gh-proxy.org/https://github.com/WGDashboard/WGDashboard.git /etc/wgdashboard
   cd /etc/wgdashboard/src
   chmod u+x wgd.sh
   $STD ./wgd.sh install

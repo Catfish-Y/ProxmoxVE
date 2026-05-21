@@ -2,7 +2,7 @@
 
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: MickLesk (CanbiZ)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
 # Source: https://www.docuseal.com/
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
@@ -39,16 +39,16 @@ msg_info "Downloading Fonts and PDFium"
 mkdir -p /opt/fonts /usr/share/fonts/noto
 ARCH=$(uname -m | sed 's/x86_64/x64/;s/aarch64/arm64/')
 curl -fsSL -o /opt/fonts/GoNotoKurrent-Regular.ttf \
-  https://github.com/satbyy/go-noto-universal/releases/download/v7.0/GoNotoKurrent-Regular.ttf
+  https://gh-proxy.org/https://github.com/satbyy/go-noto-universal/releases/download/v7.0/GoNotoKurrent-Regular.ttf
 curl -fsSL -o /opt/fonts/GoNotoKurrent-Bold.ttf \
-  https://github.com/satbyy/go-noto-universal/releases/download/v7.0/GoNotoKurrent-Bold.ttf
+  https://gh-proxy.org/https://github.com/satbyy/go-noto-universal/releases/download/v7.0/GoNotoKurrent-Bold.ttf
 curl -fsSL -o /opt/fonts/DancingScript-Regular.otf \
-  https://github.com/impallari/DancingScript/raw/master/fonts/DancingScript-Regular.otf
+  https://gh-proxy.org/https://github.com/impallari/DancingScript/raw/master/fonts/DancingScript-Regular.otf
 ln -sf /opt/fonts/GoNotoKurrent-Regular.ttf /usr/share/fonts/noto/
 ln -sf /opt/fonts/GoNotoKurrent-Bold.ttf /usr/share/fonts/noto/
 $STD fc-cache -f
 curl -fsSL -o /tmp/pdfium.tgz \
-  "https://github.com/bblanchon/pdfium-binaries/releases/latest/download/pdfium-linux-${ARCH}.tgz"
+  "https://gh-proxy.org/https://github.com/bblanchon/pdfium-binaries/releases/latest/download/pdfium-linux-${ARCH}.tgz"
 mkdir -p /tmp/pdfium && tar -xzf /tmp/pdfium.tgz -C /tmp/pdfium
 cp /tmp/pdfium/lib/libpdfium.so /usr/lib/libpdfium.so
 rm -rf /tmp/pdfium /tmp/pdfium.tgz
@@ -59,7 +59,7 @@ fetch_and_deploy_gh_release "docuseal" "docusealco/docuseal" "tarball"
 msg_info "Downloading Field Detection Model"
 mkdir -p /opt/docuseal/tmp
 curl -fsSL -o /opt/docuseal/tmp/model.onnx \
-  "https://github.com/docusealco/fields-detection/releases/download/2.0.0/model_704_int8.onnx"
+  "https://gh-proxy.org/https://github.com/docusealco/fields-detection/releases/download/2.0.0/model_704_int8.onnx"
 mkdir -p /opt/docuseal/public/fonts
 ln -sf /opt/fonts/DancingScript-Regular.otf /opt/docuseal/public/fonts/DancingScript-Regular.otf
 msg_ok "Downloaded Field Detection Model"

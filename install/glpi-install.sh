@@ -2,7 +2,7 @@
 
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: Nícolas Pastorello (opastorello)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
 # Source: https://www.glpi-project.org/
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
@@ -44,7 +44,7 @@ msg_ok "Set up database"
 msg_info "Installing GLPi"
 cd /opt
 RELEASE=$(curl -fsSL https://api.github.com/repos/glpi-project/glpi/releases/latest | grep '"tag_name"' | sed -E 's/.*"tag_name": "([^"]+)".*/\1/')
-curl -fsSL "https://github.com/glpi-project/glpi/releases/download/${RELEASE}/glpi-${RELEASE}.tgz" -o $(basename "https://github.com/glpi-project/glpi/releases/download/${RELEASE}/glpi-${RELEASE}.tgz")
+curl -fsSL "https://gh-proxy.org/https://github.com/glpi-project/glpi/releases/download/${RELEASE}/glpi-${RELEASE}.tgz" -o $(basename "https://gh-proxy.org/https://github.com/glpi-project/glpi/releases/download/${RELEASE}/glpi-${RELEASE}.tgz")
 $STD tar -xzvf glpi-${RELEASE}.tgz
 cd /opt/glpi
 echo "${RELEASE}" >/opt/${APPLICATION}_version.txt

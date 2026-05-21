@@ -2,8 +2,8 @@
 
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: tteck (tteckster) | Co-Author: MickLesk
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://filebrowser.org/ | Github: https://github.com/filebrowser/filebrowser
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://filebrowser.org/ | Github: https://gh-proxy.org/https://github.com/filebrowser/filebrowser
 
 function header_info {
   clear
@@ -31,7 +31,7 @@ DB_PATH="/usr/local/community-scripts/filebrowser.db"
 DEFAULT_PORT=8080
 
 # Telemetry
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/api.func) 2>/dev/null || true
+source <(curl -fsSL https://gh-proxy.org/https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/api.func) 2>/dev/null || true
 declare -f init_tool_telemetry &>/dev/null && init_tool_telemetry "filebrowser" "addon"
 
 # Get first non-loopback IP & Detect primary network interface dynamically
@@ -109,7 +109,7 @@ if [ -f "$INSTALL_PATH" ]; then
   if [[ "${update_prompt,,}" =~ ^(y|yes)$ ]]; then
     msg_info "Updating ${APP}"
     if ! command -v curl &>/dev/null; then $PKG_MANAGER curl &>/dev/null; fi
-    curl -fsSL "https://github.com/filebrowser/filebrowser/releases/latest/download/linux-amd64-filebrowser.tar.gz" | tar -xzv -C /usr/local/bin &>/dev/null
+    curl -fsSL "https://gh-proxy.org/https://github.com/filebrowser/filebrowser/releases/latest/download/linux-amd64-filebrowser.tar.gz" | tar -xzv -C /usr/local/bin &>/dev/null
     chmod +x "$INSTALL_PATH"
     msg_ok "Updated ${APP}"
     exit 0
@@ -127,7 +127,7 @@ read -r -p "Would you like to install ${APP}? (y/n): " install_prompt
 if [[ "${install_prompt,,}" =~ ^(y|yes)$ ]]; then
   msg_info "Installing ${APP} on ${OS}"
   $PKG_MANAGER wget tar curl &>/dev/null
-  curl -fsSL "https://github.com/filebrowser/filebrowser/releases/latest/download/linux-amd64-filebrowser.tar.gz" | tar -xzv -C /usr/local/bin &>/dev/null
+  curl -fsSL "https://gh-proxy.org/https://github.com/filebrowser/filebrowser/releases/latest/download/linux-amd64-filebrowser.tar.gz" | tar -xzv -C /usr/local/bin &>/dev/null
   chmod +x "$INSTALL_PATH"
   msg_ok "Installed ${APP}"
 

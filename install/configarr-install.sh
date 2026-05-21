@@ -2,8 +2,8 @@
 
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: finkerle
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://github.com/raydak-labs/configarr
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://gh-proxy.org/https://github.com/raydak-labs/configarr
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
 color
@@ -28,8 +28,8 @@ SECRETS_LOCATION=/opt/configarr/secrets.yml
 EOF
 
 cd /opt/configarr
-curl -fsSLO https://raw.githubusercontent.com/raydak-labs/configarr/refs/heads/main/examples/full/config/config.yml
-curl -fsSLO https://raw.githubusercontent.com/raydak-labs/configarr/refs/heads/main/examples/full/config/secrets.yml
+curl -fsSLO https://gh-proxy.org/https://raw.githubusercontent.com/raydak-labs/configarr/refs/heads/main/examples/full/config/config.yml
+curl -fsSLO https://gh-proxy.org/https://raw.githubusercontent.com/raydak-labs/configarr/refs/heads/main/examples/full/config/secrets.yml
 sed 's|#localConfigTemplatesPath: /app/templates|#localConfigTemplatesPath: /opt/configarr/templates|' /opt/configarr/config.yml
 msg_ok "Setup Configarr"
 

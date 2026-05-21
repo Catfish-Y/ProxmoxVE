@@ -2,7 +2,7 @@
 
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: Arian Nasr (arian-nasr)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
 # Source: https://www.freepbx.org/
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
@@ -14,7 +14,7 @@ network_check
 update_os
 
 msg_info "Installing FreePBX (Patience)"
-curl -fsSL https://github.com/FreePBX/sng_freepbx_debian_install/raw/master/sng_freepbx_debian_install.sh -o /opt/sng_freepbx_debian_install.sh
+curl -fsSL https://gh-proxy.org/https://github.com/FreePBX/sng_freepbx_debian_install/raw/master/sng_freepbx_debian_install.sh -o /opt/sng_freepbx_debian_install.sh
 $STD bash /opt/sng_freepbx_debian_install.sh
 rm /opt/sng_freepbx_debian_install.sh
 msg_ok "Installed FreePBX"

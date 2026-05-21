@@ -2,8 +2,8 @@
 
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: liecno
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://github.com/FunkeyFlo/ps5-mqtt/
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://gh-proxy.org/https://github.com/FunkeyFlo/ps5-mqtt/
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
 color

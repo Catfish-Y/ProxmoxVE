@@ -2,8 +2,8 @@
 
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: Andy Grunwald (andygrunwald)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://github.com/prometheus-pve/prometheus-pve-exporter
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://gh-proxy.org/https://github.com/prometheus-pve/prometheus-pve-exporter
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
 color
@@ -35,7 +35,7 @@ msg_info "Creating Service"
 cat <<EOF >/etc/systemd/system/prometheus-pve-exporter.service
 [Unit]
 Description=Prometheus Proxmox VE Exporter
-Documentation=https://github.com/znerol/prometheus-pve-exporter
+Documentation=https://gh-proxy.org/https://github.com/znerol/prometheus-pve-exporter
 After=syslog.target network.target
 
 [Service]

@@ -2,8 +2,8 @@
 
 # Copyright (c) 2021-2026 tteck
 # Author: tteck (tteckster)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://changedetection.io/ | Github: https://github.com/dgtlmoon/changedetection.io
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://changedetection.io/ | Github: https://gh-proxy.org/https://github.com/dgtlmoon/changedetection.io
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
 color
@@ -65,7 +65,7 @@ msg_ok "Installed Change Detection"
 msg_info "Installing Browserless & Playwright"
 mkdir /opt/browserless
 $STD python3 -m pip install playwright
-$STD git clone https://github.com/browserless/chrome /opt/browserless
+$STD git clone https://gh-proxy.org/https://github.com/browserless/chrome /opt/browserless
 $STD npm ci --include=optional --include=dev --prefix /opt/browserless
 $STD /opt/browserless/node_modules/playwright-core/cli.js install --with-deps &>/dev/null
 $STD /opt/browserless/node_modules/playwright-core/cli.js install --force chrome &>/dev/null

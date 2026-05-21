@@ -2,9 +2,9 @@
 
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: bvdberg01 | CanbiZ
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://github.com/karlomikus/bar-assistant
-# Source: https://github.com/karlomikus/vue-salt-rim
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://gh-proxy.org/https://github.com/karlomikus/bar-assistant
+# Source: https://gh-proxy.org/https://github.com/karlomikus/vue-salt-rim
 # Source: https://www.meilisearch.com/
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
@@ -40,7 +40,7 @@ msg_info "Installing Bar Assistant"
 cd /opt/bar-assistant
 cp /opt/bar-assistant/.env.dist /opt/bar-assistant/.env
 mkdir -p /opt/bar-assistant/resources/data
-curl -fsSL https://github.com/bar-assistant/data/archive/refs/heads/v5.tar.gz | tar -xz --strip-components=1 -C /opt/bar-assistant/resources/data
+curl -fsSL https://gh-proxy.org/https://github.com/bar-assistant/data/archive/refs/heads/v5.tar.gz | tar -xz --strip-components=1 -C /opt/bar-assistant/resources/data
 sed -i -e "s|^APP_URL=|APP_URL=http://${LOCAL_IP}/bar/|" \
   -e "s|^MEILISEARCH_HOST=|MEILISEARCH_HOST=http://127.0.0.1:7700|" \
   -e "s|^MEILISEARCH_KEY=|MEILISEARCH_KEY=${MEILISEARCH_MASTER_KEY}|" \

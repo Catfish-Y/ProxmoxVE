@@ -2,8 +2,8 @@
 
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: Jakub Matraszek (jmatraszek)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://www.cross-seed.org | Github: https://github.com/cross-seed/cross-seed
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://www.cross-seed.org | Github: https://gh-proxy.org/https://github.com/cross-seed/cross-seed
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
 color

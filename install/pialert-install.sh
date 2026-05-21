@@ -2,8 +2,8 @@
 
 # Copyright (c) 2021-2026 tteck
 # Author: tteck (tteckster)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://github.com/leiweibau/Pi.Alert/
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://gh-proxy.org/https://github.com/leiweibau/Pi.Alert/
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
 color
@@ -64,7 +64,7 @@ $STD pip3 install paho-mqtt
 msg_ok "Installed Python Dependencies"
 
 msg_info "Installing Pi.Alert"
-curl -fsSL https://github.com/leiweibau/Pi.Alert/raw/main/tar/pialert_latest.tar | tar xvf - -C /opt >/dev/null 2>&1
+curl -fsSL https://gh-proxy.org/https://github.com/leiweibau/Pi.Alert/raw/main/tar/pialert_latest.tar | tar xvf - -C /opt >/dev/null 2>&1
 rm -rf /var/lib/ieee-data /var/www/html/index.html
 sed -i -e 's#^sudo cp -n /usr/share/ieee-data/.* /var/lib/ieee-data/#\# &#' -e '/^sudo mkdir -p 2_backup$/s/^/# /' -e '/^sudo cp \*.txt 2_backup$/s/^/# /' -e '/^sudo cp \*.csv 2_backup$/s/^/# /' /opt/pialert/back/update_vendors.sh
 mv /var/www/html/index.lighttpd.html /var/www/html/index.lighttpd.html.old

@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)
+source <(curl -fsSL https://gh-proxy.org/https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: CrazyWolf13
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://github.com/RayLabsHQ/gitea-mirror
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://gh-proxy.org/https://github.com/RayLabsHQ/gitea-mirror
 
 APP="gitea-mirror"
 var_tags="${var_tags:-mirror;gitea}"
@@ -59,7 +59,7 @@ function update_script() {
     msg_info "Detected old Enviroment, updating files"
     APP_SECRET=$(openssl rand -base64 32)
     cat <<EOF >/opt/gitea-mirror.env
-# See here for config options: https://github.com/RayLabsHQ/gitea-mirror/blob/main/docs/ENVIRONMENT_VARIABLES.md
+# See here for config options: https://gh-proxy.org/https://github.com/RayLabsHQ/gitea-mirror/blob/main/docs/ENVIRONMENT_VARIABLES.md
 NODE_ENV=production
 HOST=0.0.0.0
 PORT=4321

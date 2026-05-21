@@ -2,8 +2,8 @@
 
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: tteck (tteckster) | Addon: MickLesk (CanbiZ)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://dockge.kuma.pet/ | Github: https://github.com/louislam/dockge
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://dockge.kuma.pet/ | Github: https://gh-proxy.org/https://github.com/louislam/dockge
 if ! command -v curl &>/dev/null; then
   printf "\r\e[2K%b" '\033[93m Setup Source \033[m' >&2
   if [[ -f /etc/alpine-release ]]; then
@@ -14,10 +14,10 @@ if ! command -v curl &>/dev/null; then
     apt-get install -y curl >/dev/null 2>&1
   fi
 fi
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/core.func)
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/tools.func)
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/error_handler.func)
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/api.func) 2>/dev/null || true
+source <(curl -fsSL https://gh-proxy.org/https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/core.func)
+source <(curl -fsSL https://gh-proxy.org/https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/tools.func)
+source <(curl -fsSL https://gh-proxy.org/https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/error_handler.func)
+source <(curl -fsSL https://gh-proxy.org/https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/api.func) 2>/dev/null || true
 declare -f init_tool_telemetry &>/dev/null && init_tool_telemetry "dockge" "addon"
 
 # Enable error handling
@@ -138,7 +138,7 @@ function install() {
   msg_ok "Created ${INSTALL_PATH} and ${STACKS_PATH}"
 
   msg_info "Downloading Docker Compose file"
-  curl -fsSL "https://raw.githubusercontent.com/louislam/dockge/master/compose.yaml" -o "$COMPOSE_FILE"
+  curl -fsSL "https://gh-proxy.org/https://raw.githubusercontent.com/louislam/dockge/master/compose.yaml" -o "$COMPOSE_FILE"
   msg_ok "Downloaded Docker Compose file"
 
   msg_info "Starting ${APP}"

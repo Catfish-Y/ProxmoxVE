@@ -2,7 +2,7 @@
 
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: Mips2648
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
 # Source: https://jeedom.com/
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
@@ -19,10 +19,10 @@ $STD apt install -y \
   git
 msg_ok "Dependencies installed"
 
-msg_warn "WARNING: This script will run an external installer from a third-party source (https://github.com/jeedom/)."
+msg_warn "WARNING: This script will run an external installer from a third-party source (https://gh-proxy.org/https://github.com/jeedom/)."
 msg_warn "The following code is NOT maintained or audited by our repository."
 msg_warn "If you have any doubts or concerns, please review the installer code before proceeding:"
-msg_custom "${TAB3}${GATEWAY}${BGN}${CL}" "\e[1;34m" "→  https://raw.githubusercontent.com/jeedom/core/master/install/install.sh"
+msg_custom "${TAB3}${GATEWAY}${BGN}${CL}" "\e[1;34m" "→  https://gh-proxy.org/https://raw.githubusercontent.com/jeedom/core/master/install/install.sh"
 echo
 read -r -p "${TAB3}Do you want to continue? [y/N]: " CONFIRM
 if [[ ! "$CONFIRM" =~ ^([yY][eE][sS]|[yY])$ ]]; then
@@ -31,7 +31,7 @@ if [[ ! "$CONFIRM" =~ ^([yY][eE][sS]|[yY])$ ]]; then
 fi
 
 DEFAULT_BRANCH="master"
-REPO_URL="https://github.com/jeedom/core.git"
+REPO_URL="https://gh-proxy.org/https://github.com/jeedom/core.git"
 
 echo
 while true; do
@@ -47,7 +47,7 @@ done
 
 msg_info "Downloading Jeedom installation script"
 cd /tmp
-wget -q https://raw.githubusercontent.com/jeedom/core/"${BRANCH}"/install/install.sh
+wget -q https://gh-proxy.org/https://raw.githubusercontent.com/jeedom/core/"${BRANCH}"/install/install.sh
 chmod +x install.sh
 msg_ok "Installation script downloaded"
 

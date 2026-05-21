@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)
+source <(curl -fsSL https://gh-proxy.org/https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: Slaviša Arežina (tremor021)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://github.com/benzino77/tasmocompiler
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://gh-proxy.org/https://github.com/benzino77/tasmocompiler
 
 APP="TasmoCompiler"
 var_tags="${var_tags:-compiler}"
@@ -37,7 +37,7 @@ function update_script() {
     cd /opt
     rm -rf /opt/tasmocompiler
     RELEASE=$(curl -fsSL https://api.github.com/repos/benzino77/tasmocompiler/releases/latest | grep "tag_name" | awk '{print substr($2, 3, length($2)-4) }')
-    curl -fsSL "https://github.com/benzino77/tasmocompiler/archive/refs/tags/v${RELEASE}.tar.gz" -o $(basename "https://github.com/benzino77/tasmocompiler/archive/refs/tags/v${RELEASE}.tar.gz")
+    curl -fsSL "https://gh-proxy.org/https://github.com/benzino77/tasmocompiler/archive/refs/tags/v${RELEASE}.tar.gz" -o $(basename "https://gh-proxy.org/https://github.com/benzino77/tasmocompiler/archive/refs/tags/v${RELEASE}.tar.gz")
     tar xzf v${RELEASE}.tar.gz
     mv tasmocompiler-${RELEASE}/ /opt/tasmocompiler/
     cd /opt/tasmocompiler

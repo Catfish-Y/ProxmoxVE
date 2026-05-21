@@ -2,8 +2,8 @@
 
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: Slaviša Arežina (tremor021)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://github.com/TwiN/gatus
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://gh-proxy.org/https://github.com/TwiN/gatus
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
 color
@@ -24,7 +24,7 @@ RELEASE=$(curl -s https://api.github.com/repos/TwiN/gatus/releases/latest | grep
 msg_info "Installing gatus v${RELEASE}"
 temp_file=$(mktemp)
 mkdir -p /opt/gatus
-curl -fsSL "https://github.com/TwiN/gatus/archive/refs/tags/v${RELEASE}.tar.gz" -o "$temp_file"
+curl -fsSL "https://gh-proxy.org/https://github.com/TwiN/gatus/archive/refs/tags/v${RELEASE}.tar.gz" -o "$temp_file"
 tar zxf "$temp_file" --strip-components=1 -C /opt/gatus
 cd /opt/gatus
 $STD go mod tidy

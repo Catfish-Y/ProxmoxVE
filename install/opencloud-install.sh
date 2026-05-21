@@ -2,8 +2,8 @@
 
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: vhsdream
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://opencloud.eu | Github: https://github.com/opencloud-eu/opencloud
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://opencloud.eu | Github: https://gh-proxy.org/https://github.com/opencloud-eu/opencloud
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
 color
@@ -73,8 +73,8 @@ CONFIG_DIR="/etc/opencloud"
 ENV_FILE="${CONFIG_DIR}/opencloud.env"
 mkdir -p "$DATA_DIR" "$CONFIG_DIR"/web/assets/{apps,themes}
 
-curl -fsSL https://raw.githubusercontent.com/opencloud-eu/opencloud-compose/refs/heads/main/config/opencloud/csp.yaml -o "$CONFIG_DIR"/csp.yaml
-curl -fsSL https://raw.githubusercontent.com/opencloud-eu/opencloud-compose/refs/heads/main/config/opencloud/proxy.yaml -o "$CONFIG_DIR"/proxy.yaml.bak
+curl -fsSL https://gh-proxy.org/https://raw.githubusercontent.com/opencloud-eu/opencloud-compose/refs/heads/main/config/opencloud/csp.yaml -o "$CONFIG_DIR"/csp.yaml
+curl -fsSL https://gh-proxy.org/https://raw.githubusercontent.com/opencloud-eu/opencloud-compose/refs/heads/main/config/opencloud/proxy.yaml -o "$CONFIG_DIR"/proxy.yaml.bak
 
 cat <<EOF >"$ENV_FILE"
 OC_URL=https://${OPENCLOUD_FQDN}

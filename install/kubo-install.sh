@@ -3,8 +3,8 @@
 # Copyright (c) 2021-2026 tteck
 # Author: tteck (tteckster)
 # Co-Author: ulmentflam
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://github.com/ipfs/kubo
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://gh-proxy.org/https://github.com/ipfs/kubo
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
 color

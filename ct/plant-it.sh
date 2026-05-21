@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)
+source <(curl -fsSL https://gh-proxy.org/https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: MickLesk (CanbiZ)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://plant-it.org/ | Github: https://github.com/MDeLuise/plant-it
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://plant-it.org/ | Github: https://gh-proxy.org/https://github.com/MDeLuise/plant-it
 
 APP="Plant-it"
 var_tags="${var_tags:-plants;garden}"
@@ -37,7 +37,7 @@ function update_script() {
     USE_ORIGINAL_FILENAME="true" fetch_and_deploy_gh_release "plant-it" "MDeLuise/plant-it" "singlefile" "${RELEASE}" "/opt/plant-it/backend" "server.jar"
     fetch_and_deploy_gh_release "plant-it-front" "MDeLuise/plant-it" "prebuild" "${RELEASE}" "/opt/plant-it/frontend" "client.tar.gz"
     msg_warn "Application is updated to latest Web version (v0.10.0). There will be no more updates available."
-    msg_warn "Please read: https://github.com/MDeLuise/plant-it/releases/tag/1.0.0"
+    msg_warn "Please read: https://gh-proxy.org/https://github.com/MDeLuise/plant-it/releases/tag/1.0.0"
 
     msg_info "Starting Service"
     systemctl start plant-it

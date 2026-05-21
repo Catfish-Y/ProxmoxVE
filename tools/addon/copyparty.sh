@@ -2,18 +2,18 @@
 
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: MickLesk
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://github.com/9001/copyparty
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://gh-proxy.org/https://github.com/9001/copyparty
 
 if ! command -v curl &>/dev/null; then
   printf "\r\e[2K%b" '\033[93m Setup Source \033[m' >&2
   apt-get update >/dev/null 2>&1
   apt-get install -y curl >/dev/null 2>&1
 fi
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/core.func)
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/tools.func)
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/error_handler.func)
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/api.func) 2>/dev/null || true
+source <(curl -fsSL https://gh-proxy.org/https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/core.func)
+source <(curl -fsSL https://gh-proxy.org/https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/tools.func)
+source <(curl -fsSL https://gh-proxy.org/https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/error_handler.func)
+source <(curl -fsSL https://gh-proxy.org/https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/api.func) 2>/dev/null || true
 declare -f init_tool_telemetry &>/dev/null && init_tool_telemetry "copyparty" "addon"
 
 # Enable error handling
@@ -33,7 +33,7 @@ LOG_PATH="/var/log/copyparty"
 DATA_PATH="/var/lib/copyparty"
 SVC_USER="copyparty"
 SVC_GROUP="copyparty"
-SRC_URL="https://github.com/9001/copyparty/releases/latest/download/copyparty-sfx.py"
+SRC_URL="https://gh-proxy.org/https://github.com/9001/copyparty/releases/latest/download/copyparty-sfx.py"
 DEFAULT_PORT=3923
 
 # ==============================================================================
@@ -289,7 +289,7 @@ SERVICEEOF
   cat <<'UPDATEEOF' >/usr/local/bin/update_copyparty
 #!/usr/bin/env bash
 # CopyParty Update Script
-type=update bash -c "$(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/tools/addon/copyparty.sh)"
+type=update bash -c "$(curl -fsSL https://gh-proxy.org/https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/tools/addon/copyparty.sh)"
 UPDATEEOF
   chmod +x /usr/local/bin/update_copyparty
   msg_ok "Created update script (/usr/local/bin/update_copyparty)"

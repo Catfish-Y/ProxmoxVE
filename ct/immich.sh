@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)
+source <(curl -fsSL https://gh-proxy.org/https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: vhsdream
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://immich.app | Github: https://github.com/immich-app/immich
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://immich.app | Github: https://gh-proxy.org/https://github.com/immich-app/immich
 
 APP="immich"
 var_tags="${var_tags:-photos}"
@@ -31,7 +31,7 @@ function update_script() {
   if [[ -f /etc/apt/sources.list.d/immich.list ]]; then
     msg_error "Wrong Debian version detected!"
     msg_error "You must upgrade your LXC to Debian Trixie before updating."
-    msg_error "Please visit https://github.com/community-scripts/ProxmoxVE/discussions/7726 for details."
+    msg_error "Please visit https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/discussions/7726 for details."
     echo "${TAB3}  If you have upgraded your LXC to Trixie and you still see this message, please open an Issue in the Community-Scripts repo."
     exit
   fi
@@ -76,7 +76,7 @@ EOF
   SOURCE_DIR=${STAGING_DIR}/image-source
   cd /tmp
   if [[ -f ~/.intel_version ]]; then
-    curl_with_retry "https://raw.githubusercontent.com/immich-app/immich/refs/heads/main/machine-learning/Dockerfile" "Dockerfile"
+    curl_with_retry "https://gh-proxy.org/https://raw.githubusercontent.com/immich-app/immich/refs/heads/main/machine-learning/Dockerfile" "Dockerfile"
     readarray -t INTEL_URLS < <(
       sed -n "/intel-[igc|opencl]/p" ./Dockerfile | awk '{print $3}'
       sed -n "/libigdgmm12/p" ./Dockerfile | awk '{print $3}'
@@ -314,7 +314,7 @@ function compile_libjxl() {
   if [[ "$LIBJXL_REVISION" != "$(grep 'libjxl' ~/.immich_library_revisions | awk '{print $2}')" ]]; then
     msg_info "Recompiling libjxl"
     [[ -d "$SOURCE" ]] && rm -rf "$SOURCE"
-    $STD git clone https://github.com/libjxl/libjxl.git "$SOURCE"
+    $STD git clone https://gh-proxy.org/https://github.com/libjxl/libjxl.git "$SOURCE"
     cd "$SOURCE"
     $STD git reset --hard "$LIBJXL_REVISION"
     $STD git submodule update --init --recursive --depth 1 --recommend-shallow
@@ -359,7 +359,7 @@ function compile_libheif() {
   if [[ "${update:-}" ]] || [[ "$LIBHEIF_REVISION" != "$(grep 'libheif' ~/.immich_library_revisions | awk '{print $2}')" ]]; then
     msg_info "Recompiling libheif"
     [[ -d "$SOURCE" ]] && rm -rf "$SOURCE"
-    $STD git clone https://github.com/strukturag/libheif.git "$SOURCE"
+    $STD git clone https://gh-proxy.org/https://github.com/strukturag/libheif.git "$SOURCE"
     cd "$SOURCE"
     $STD git reset --hard "$LIBHEIF_REVISION"
     mkdir build
@@ -391,7 +391,7 @@ function compile_libraw() {
   if [[ "$LIBRAW_REVISION" != "$(grep 'libraw' ~/.immich_library_revisions | awk '{print $2}')" ]]; then
     msg_info "Recompiling libraw"
     [[ -d "$SOURCE" ]] && rm -rf "$SOURCE"
-    $STD git clone https://github.com/LibRaw/LibRaw.git "$SOURCE"
+    $STD git clone https://gh-proxy.org/https://github.com/LibRaw/LibRaw.git "$SOURCE"
     cd "$SOURCE"
     $STD git reset --hard "$LIBRAW_REVISION"
     $STD autoreconf --install
@@ -413,7 +413,7 @@ function compile_imagemagick() {
     ! grep -q 'DMAGICK_LIBRAW' /usr/local/lib/ImageMagick-7*/config-Q16HDRI/configure.xml; then
     msg_info "Recompiling ImageMagick"
     [[ -d "$SOURCE" ]] && rm -rf "$SOURCE"
-    $STD git clone https://github.com/ImageMagick/ImageMagick.git "$SOURCE"
+    $STD git clone https://gh-proxy.org/https://github.com/ImageMagick/ImageMagick.git "$SOURCE"
     cd "$SOURCE"
     $STD git reset --hard "$IMAGEMAGICK_REVISION"
     $STD ./configure --with-modules CPPFLAGS="-DMAGICK_LIBRAW_VERSION_TAIL=202502"
@@ -433,7 +433,7 @@ function compile_libvips() {
   if [[ "$LIBVIPS_REVISION" != "$(grep 'libvips' ~/.immich_library_revisions | awk '{print $2}')" ]]; then
     msg_info "Recompiling libvips"
     [[ -d "$SOURCE" ]] && rm -rf "$SOURCE"
-    $STD git clone https://github.com/libvips/libvips.git "$SOURCE"
+    $STD git clone https://gh-proxy.org/https://github.com/libvips/libvips.git "$SOURCE"
     cd "$SOURCE"
     $STD git reset --hard "$LIBVIPS_REVISION"
     $STD meson setup build --buildtype=release --libdir=lib -Dintrospection=disabled -Dtiff=disabled

@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)
+source <(curl -fsSL https://gh-proxy.org/https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: Andy Grunwald (andygrunwald)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://github.com/prometheus-pve/prometheus-pve-exporter
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://gh-proxy.org/https://github.com/prometheus-pve/prometheus-pve-exporter
 
 APP="Prometheus-PVE-Exporter"
 var_tags="${var_tags:-monitoring}"
@@ -58,7 +58,7 @@ function update_script() {
     cat <<EOF >"$service_file"
 [Unit]
 Description=Prometheus Proxmox VE Exporter
-Documentation=https://github.com/znerol/prometheus-pve-exporter
+Documentation=https://gh-proxy.org/https://github.com/znerol/prometheus-pve-exporter
 After=syslog.target network.target
 
 [Service]

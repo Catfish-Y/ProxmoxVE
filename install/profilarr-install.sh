@@ -2,8 +2,8 @@
 
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: michelroegl-brunner
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://github.com/Dictionarry-Hub/profilarr
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://gh-proxy.org/https://github.com/Dictionarry-Hub/profilarr
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
 color

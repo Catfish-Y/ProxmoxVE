@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)
+source <(curl -fsSL https://gh-proxy.org/https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: durzo
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://github.com/connorgallopo/Tracearr
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://gh-proxy.org/https://github.com/connorgallopo/Tracearr
 
 APP="Tracearr"
 var_tags="${var_tags:-media}"
@@ -106,7 +106,7 @@ EOF
     msg_ok "Stopped Services"
 
     msg_info "Updating pnpm"
-    PNPM_VERSION="$(curl -fsSL "https://raw.githubusercontent.com/connorgallopo/Tracearr/refs/heads/main/package.json" | jq -r '.packageManager | split("@")[1]' | cut -d'+' -f1)"
+    PNPM_VERSION="$(curl -fsSL "https://gh-proxy.org/https://raw.githubusercontent.com/connorgallopo/Tracearr/refs/heads/main/package.json" | jq -r '.packageManager | split("@")[1]' | cut -d'+' -f1)"
     export COREPACK_ENABLE_DOWNLOAD_PROMPT=0
     $STD corepack prepare pnpm@${PNPM_VERSION} --activate
     msg_ok "Updated pnpm"

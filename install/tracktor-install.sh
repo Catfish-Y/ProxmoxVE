@@ -2,8 +2,8 @@
 
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: CrazyWolf13
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://tracktor.bytedge.in | Github: https://github.com/javedh-dev/tracktor
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://tracktor.bytedge.in | Github: https://gh-proxy.org/https://github.com/javedh-dev/tracktor
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
 color

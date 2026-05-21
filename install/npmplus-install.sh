@@ -2,8 +2,8 @@
 
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: MickLesk (CanbiZ)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://github.com/ZoeyVid/NPMplus
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://gh-proxy.org/https://github.com/ZoeyVid/NPMplus
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
 color
@@ -31,13 +31,13 @@ get_latest_release() {
 DOCKER_COMPOSE_LATEST_VERSION=$(get_latest_release "docker/compose")
 DOCKER_CONFIG=${DOCKER_CONFIG:-$HOME/.docker}
 mkdir -p $DOCKER_CONFIG/cli-plugins
-curl -fsSL https://github.com/docker/compose/releases/download/$DOCKER_COMPOSE_LATEST_VERSION/docker-compose-linux-x86_64 -o ~/.docker/cli-plugins/docker-compose
+curl -fsSL https://gh-proxy.org/https://github.com/docker/compose/releases/download/$DOCKER_COMPOSE_LATEST_VERSION/docker-compose-linux-x86_64 -o ~/.docker/cli-plugins/docker-compose
 chmod +x $DOCKER_CONFIG/cli-plugins/docker-compose
 msg_ok "Installed Docker & Compose"
 
 msg_info "Fetching NPMplus"
 cd /opt
-curl -fsSL "https://raw.githubusercontent.com/ZoeyVid/NPMplus/refs/heads/develop/compose.yaml" -o compose.yaml
+curl -fsSL "https://gh-proxy.org/https://raw.githubusercontent.com/ZoeyVid/NPMplus/refs/heads/develop/compose.yaml" -o compose.yaml
 msg_ok "Fetched NPMplus"
 
 attempts=0

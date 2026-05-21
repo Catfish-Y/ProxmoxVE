@@ -2,13 +2,13 @@
 
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: Andy Grunwald (andygrunwald)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://github.com/hansmi/prometheus-paperless-exporter
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://gh-proxy.org/https://github.com/hansmi/prometheus-paperless-exporter
 
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/core.func)
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/tools.func)
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/error_handler.func)
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/api.func) 2>/dev/null || true
+source <(curl -fsSL https://gh-proxy.org/https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/core.func)
+source <(curl -fsSL https://gh-proxy.org/https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/tools.func)
+source <(curl -fsSL https://gh-proxy.org/https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/error_handler.func)
+source <(curl -fsSL https://gh-proxy.org/https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/api.func) 2>/dev/null || true
 declare -f init_tool_telemetry &>/dev/null && init_tool_telemetry "prometheus-paperless-ngx-exporter" "addon"
 
 # Enable error handling
@@ -85,7 +85,7 @@ function install() {
   msg_info "Creating configuration"
   mkdir -p /etc/prometheus-paperless-ngx-exporter
   cat <<EOF >"$CONFIG_PATH"
-# https://github.com/hansmi/prometheus-paperless-exporter
+# https://gh-proxy.org/https://github.com/hansmi/prometheus-paperless-exporter
 PAPERLESS_URL="${PAPERLESS_URL}"
 EOF
   echo "${PAPERLESS_AUTH_TOKEN}" >"$AUTH_TOKEN_FILE"
@@ -120,7 +120,7 @@ EOF
   cat <<'UPDATEEOF' >/usr/local/bin/update_prometheus-paperless-ngx-exporter
 #!/usr/bin/env bash
 # prometheus-paperless-ngx-exporter Update Script
-type=update bash -c "$(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/tools/addon/prometheus-paperless-ngx-exporter.sh)"
+type=update bash -c "$(curl -fsSL https://gh-proxy.org/https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/tools/addon/prometheus-paperless-ngx-exporter.sh)"
 UPDATEEOF
   chmod +x /usr/local/bin/update_prometheus-paperless-ngx-exporter
   msg_ok "Created update script (/usr/local/bin/update_prometheus-paperless-ngx-exporter)"

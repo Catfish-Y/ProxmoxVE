@@ -2,8 +2,8 @@
 
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: MickLesk (CanbiZ)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://github.com/Termix-SSH/Termix
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://gh-proxy.org/https://github.com/Termix-SSH/Termix
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
 color
@@ -93,7 +93,7 @@ cp -r /opt/termix/public/fonts /opt/termix/html/fonts 2>/dev/null || true
 msg_ok "Set up Directories"
 
 msg_info "Configuring Nginx"
-curl -fsSL "https://raw.githubusercontent.com/Termix-SSH/Termix/main/docker/nginx.conf" -o /etc/nginx/nginx.conf
+curl -fsSL "https://gh-proxy.org/https://raw.githubusercontent.com/Termix-SSH/Termix/main/docker/nginx.conf" -o /etc/nginx/nginx.conf
 sed -i '/^master_process/d' /etc/nginx/nginx.conf
 sed -i '/^pid \/app\/nginx/d' /etc/nginx/nginx.conf
 sed -i 's|/app/html|/opt/termix/html|g' /etc/nginx/nginx.conf

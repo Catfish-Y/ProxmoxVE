@@ -2,8 +2,8 @@
 
 # Copyright (c) 2021-2026 tteck
 # Author: tteck (tteckster)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://www.bazarr.media/ | Github: https://github.com/morpheus65535/bazarr
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://www.bazarr.media/ | Github: https://gh-proxy.org/https://github.com/morpheus65535/bazarr
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
 color

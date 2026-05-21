@@ -2,8 +2,8 @@
 
 # Copyright (c) 2021-2026 tteck
 # Author: tteck (tteckster)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://www.webmin.com/ | Github: https://github.com/webmin/webmin
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://www.webmin.com/ | Github: https://gh-proxy.org/https://github.com/webmin/webmin
 
 function header_info {
   clear
@@ -37,7 +37,7 @@ msg_ok() {
 }
 
 # Telemetry
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/api.func) 2>/dev/null || true
+source <(curl -fsSL https://gh-proxy.org/https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/api.func) 2>/dev/null || true
 declare -f init_tool_telemetry &>/dev/null && init_tool_telemetry "webmin" "addon"
 
 header_info
@@ -52,7 +52,7 @@ msg_ok "Installed Prerequisites"
 LATEST=$(curl -fsSL https://api.github.com/repos/webmin/webmin/releases/latest | grep '"tag_name":' | cut -d'"' -f4)
 
 msg_info "Downloading Webmin"
-curl -fsSL "https://github.com/webmin/webmin/releases/download/$LATEST/webmin_${LATEST}_all.deb" -o $(basename "https://github.com/webmin/webmin/releases/download/$LATEST/webmin_${LATEST}_all.deb")
+curl -fsSL "https://gh-proxy.org/https://github.com/webmin/webmin/releases/download/$LATEST/webmin_${LATEST}_all.deb" -o $(basename "https://gh-proxy.org/https://github.com/webmin/webmin/releases/download/$LATEST/webmin_${LATEST}_all.deb")
 msg_ok "Downloaded Webmin"
 
 msg_info "Installing Webmin"

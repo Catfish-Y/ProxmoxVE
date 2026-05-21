@@ -2,8 +2,8 @@
 
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: vhsdream
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://github.com/PatcMmon/PatchMon
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://gh-proxy.org/https://github.com/PatcMmon/PatchMon
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
 color
@@ -66,7 +66,7 @@ msg_ok "Configured PatchMon"
 msg_info "Fetching PatchMon agent binaries"
 RELEASE=$(get_latest_github_release "PatchMon/PatchMon")
 mkdir -p /opt/patchmon/agents
-FILE_URL="https://github.com/PatchMon/PatchMon/releases/download/v${RELEASE}/patchmon-agent-"
+FILE_URL="https://gh-proxy.org/https://github.com/PatchMon/PatchMon/releases/download/v${RELEASE}/patchmon-agent-"
 AGENT_NAME=(
   "linux-amd64"
   "linux-arm64"

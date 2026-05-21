@@ -2,8 +2,8 @@
 
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: Tom Frenzel (tomfrenzel)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://github.com/CodeWithCJ/SparkyFitness
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://gh-proxy.org/https://github.com/CodeWithCJ/SparkyFitness
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
 color

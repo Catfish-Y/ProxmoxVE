@@ -2,8 +2,8 @@
 
 # Copyright (c) 2021-2026 tteck
 # Author: tteck (tteckster) | MickLesk (CanbiZ)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://docs.paperless-ngx.com/ | Github: https://github.com/paperless-ngx/paperless-ngx
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://docs.paperless-ngx.com/ | Github: https://gh-proxy.org/https://github.com/paperless-ngx/paperless-ngx
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
 color
@@ -52,7 +52,7 @@ msg_info "Setup Paperless-ngx"
 cd /opt/paperless
 rm -rf /opt/paperless/docker
 $STD uv sync --all-extras
-curl -fsSL "https://raw.githubusercontent.com/paperless-ngx/paperless-ngx/main/paperless.conf.example" -o /opt/paperless/paperless.conf
+curl -fsSL "https://gh-proxy.org/https://raw.githubusercontent.com/paperless-ngx/paperless-ngx/main/paperless.conf.example" -o /opt/paperless/paperless.conf
 mkdir -p /opt/paperless_data/{consume,data,media,trash}
 mkdir -p /opt/paperless/static
 SECRET_KEY="$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c 32)"

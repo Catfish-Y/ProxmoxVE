@@ -2,8 +2,8 @@
 
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: MickLesk (CanbiZ)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://www.meilisearch.com/ | Github: https://github.com/meilisearch/meilisearch
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://www.meilisearch.com/ | Github: https://gh-proxy.org/https://github.com/meilisearch/meilisearch
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
 color

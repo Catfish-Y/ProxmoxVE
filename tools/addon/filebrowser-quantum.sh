@@ -2,8 +2,8 @@
 
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: MickLesk
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://github.com/filebrowserspace/quantum
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://gh-proxy.org/https://github.com/filebrowserspace/quantum
 
 function header_info() {
   clear
@@ -34,7 +34,7 @@ SRC_DIR="/"
 TMP_BIN="/tmp/filebrowser.$$"
 
 # Telemetry
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/api.func) 2>/dev/null || true
+source <(curl -fsSL https://gh-proxy.org/https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/api.func) 2>/dev/null || true
 declare -f init_tool_telemetry &>/dev/null && init_tool_telemetry "filebrowser-quantum" "addon"
 
 # Get primary IP
@@ -131,7 +131,7 @@ if [[ -f "$INSTALL_PATH" ]]; then
   if [[ "${update_prompt,,}" =~ ^(y|yes)$ ]]; then
     msg_info "Updating ${APP}"
     if ! command -v curl &>/dev/null; then $PKG_MANAGER curl &>/dev/null; fi
-    curl -fsSL https://github.com/gtsteffaniak/filebrowser/releases/latest/download/linux-amd64-filebrowser -o "$TMP_BIN"
+    curl -fsSL https://gh-proxy.org/https://github.com/gtsteffaniak/filebrowser/releases/latest/download/linux-amd64-filebrowser -o "$TMP_BIN"
     chmod +x "$TMP_BIN"
     mv -f "$TMP_BIN" /usr/local/bin/filebrowser
     msg_ok "Updated ${APP}"
@@ -156,7 +156,7 @@ fi
 
 msg_info "Installing ${APP} on ${OS}"
 $PKG_MANAGER curl ffmpeg &>/dev/null
-curl -fsSL https://github.com/gtsteffaniak/filebrowser/releases/latest/download/linux-amd64-filebrowser -o "$TMP_BIN"
+curl -fsSL https://gh-proxy.org/https://github.com/gtsteffaniak/filebrowser/releases/latest/download/linux-amd64-filebrowser -o "$TMP_BIN"
 chmod +x "$TMP_BIN"
 mv -f "$TMP_BIN" /usr/local/bin/filebrowser
 msg_ok "Installed ${APP}"

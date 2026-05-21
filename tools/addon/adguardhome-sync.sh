@@ -2,8 +2,8 @@
 
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: MickLesk (CanbiZ)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://github.com/bakito/adguardhome-sync
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://gh-proxy.org/https://github.com/bakito/adguardhome-sync
 
 if ! command -v curl &>/dev/null; then
   printf "\r\e[2K%b" '\033[93m Setup Source \033[m' >&2
@@ -14,10 +14,10 @@ if ! command -v curl &>/dev/null; then
     apt-get install -y curl >/dev/null 2>&1
   fi
 fi
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/core.func)
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/tools.func)
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/error_handler.func)
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/api.func) 2>/dev/null || true
+source <(curl -fsSL https://gh-proxy.org/https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/core.func)
+source <(curl -fsSL https://gh-proxy.org/https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/tools.func)
+source <(curl -fsSL https://gh-proxy.org/https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/error_handler.func)
+source <(curl -fsSL https://gh-proxy.org/https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/api.func) 2>/dev/null || true
 declare -f init_tool_telemetry &>/dev/null && init_tool_telemetry "adguardhome-sync" "addon"
 
 # Enable error handling
@@ -183,7 +183,7 @@ function install() {
   msg_info "Creating configuration"
   cat <<EOF >"$CONFIG_PATH"
 # AdGuardHome-Sync Configuration
-# Documentation: https://github.com/bakito/adguardhome-sync
+# Documentation: https://gh-proxy.org/https://github.com/bakito/adguardhome-sync
 
 # Cron expression for sync interval (e.g., every 2 hours: "0 */2 * * *")
 cron: "0 */2 * * *"
@@ -286,7 +286,7 @@ EOF
   cat <<'UPDATEEOF' >/usr/local/bin/update_adguardhome-sync
 #!/usr/bin/env bash
 # AdGuardHome-Sync Update Script
-type=update bash -c "$(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/tools/addon/adguardhome-sync.sh)"
+type=update bash -c "$(curl -fsSL https://gh-proxy.org/https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/tools/addon/adguardhome-sync.sh)"
 UPDATEEOF
   chmod +x /usr/local/bin/update_adguardhome-sync
   msg_ok "Created update script (/usr/local/bin/update_adguardhome-sync)"

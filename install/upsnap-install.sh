@@ -2,8 +2,8 @@
 
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: Slaviša Arežina (tremor021)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://github.com/seriousm4x/UpSnap
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://gh-proxy.org/https://github.com/seriousm4x/UpSnap
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
 color
@@ -30,7 +30,7 @@ msg_info "Creating Service"
 cat <<EOF >/etc/systemd/system/upsnap.service
 [Unit]
 Description=UpSnap Service
-Documentation=https://github.com/seriousm4x/UpSnap/wiki
+Documentation=https://gh-proxy.org/https://github.com/seriousm4x/UpSnap/wiki
 After=network.target
 
 [Service]

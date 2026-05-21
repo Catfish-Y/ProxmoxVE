@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)
+source <(curl -fsSL https://gh-proxy.org/https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: Slaviša Arežina (tremor021)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://github.com/bitmagnet-io/bitmagnet
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://gh-proxy.org/https://github.com/bitmagnet-io/bitmagnet
 
 APP="Alpine-bitmagnet"
 var_tags="${var_tags:-alpine;torrent}"
@@ -60,7 +60,7 @@ function update_script() {
     [ -f /opt/bitmagnet/config.yml ] && cp /opt/bitmagnet/config.yml /opt/
     rm -rf /opt/bitmagnet/*
     temp_file=$(mktemp)
-    curl -fsSL "https://github.com/bitmagnet-io/bitmagnet/archive/refs/tags/v${RELEASE}.tar.gz" -o "$temp_file"
+    curl -fsSL "https://gh-proxy.org/https://github.com/bitmagnet-io/bitmagnet/archive/refs/tags/v${RELEASE}.tar.gz" -o "$temp_file"
     tar zxf "$temp_file" --strip-components=1 -C /opt/bitmagnet
     cd /opt/bitmagnet
     VREL=v$RELEASE

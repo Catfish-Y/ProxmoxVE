@@ -2,8 +2,8 @@
 
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: MickLesk (Canbiz)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://docmost.com/ | Github: https://github.com/docmost/docmost
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://docmost.com/ | Github: https://gh-proxy.org/https://github.com/docmost/docmost
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
 color
@@ -19,7 +19,7 @@ $STD apt install -y \
   make
 msg_ok "Installed Dependencies"
 
-NODE_VERSION="22" NODE_MODULE="pnpm@$(curl -s https://raw.githubusercontent.com/docmost/docmost/main/package.json | jq -r '.packageManager | split("@")[1]')" setup_nodejs
+NODE_VERSION="22" NODE_MODULE="pnpm@$(curl -s https://gh-proxy.org/https://raw.githubusercontent.com/docmost/docmost/main/package.json | jq -r '.packageManager | split("@")[1]')" setup_nodejs
 PG_VERSION="16" setup_postgresql
 PG_DB_NAME="docmost_db" PG_DB_USER="docmost_user" setup_postgresql_db
 fetch_and_deploy_gh_release "docmost" "docmost/docmost" "tarball"

@@ -2,8 +2,8 @@
 
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: MickLesk (CanbiZ)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://mealie.io | Github: https://github.com/mealie-recipes/mealie
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://mealie.io | Github: https://gh-proxy.org/https://github.com/mealie-recipes/mealie
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
 color
@@ -43,7 +43,7 @@ MEALIE_VERSION=$(<$HOME/.mealie)
 export NUXT_TELEMETRY_DISABLED=1
 cd /opt/mealie/frontend
 SITE_SETTINGS=$(find /opt/mealie/frontend -name "site-settings.vue" -path "*/admin/*" | head -1)
-$STD sed -i "s|https://github.com/mealie-recipes/mealie/commit/|https://github.com/mealie-recipes/mealie/releases/tag/|g" "$SITE_SETTINGS"
+$STD sed -i "s|https://gh-proxy.org/https://github.com/mealie-recipes/mealie/commit/|https://gh-proxy.org/https://github.com/mealie-recipes/mealie/releases/tag/|g" "$SITE_SETTINGS"
 $STD sed -i "s|value: data.buildId,|value: \"v${MEALIE_VERSION}\",|g" "$SITE_SETTINGS"
 $STD sed -i "s|value: data.production ? i18n.t(\"about.production\") : i18n.t(\"about.development\"),|value: \"bare-metal\",|g" "$SITE_SETTINGS"
 $STD yarn install --prefer-offline --frozen-lockfile --non-interactive --production=false --network-timeout 1000000

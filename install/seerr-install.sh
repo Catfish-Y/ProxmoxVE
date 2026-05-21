@@ -2,8 +2,8 @@
 
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: CrazyWolf13
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://docs.seerr.dev/ | Github: https://github.com/seerr-team/seerr
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://docs.seerr.dev/ | Github: https://gh-proxy.org/https://github.com/seerr-team/seerr
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
 color

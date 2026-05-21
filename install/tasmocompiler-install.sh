@@ -2,8 +2,8 @@
 
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: Slaviša Arežina (tremor021)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://github.com/benzino77/tasmocompiler
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://gh-proxy.org/https://github.com/benzino77/tasmocompiler
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
 color
@@ -22,14 +22,14 @@ msg_ok "Installed Dependencies"
 NODE_VERSION="22" NODE_MODULE="yarn@latest" setup_nodejs
 
 msg_info "Setup Platformio"
-curl -fsSL -o get-platformio.py https://raw.githubusercontent.com/platformio/platformio-core-installer/master/get-platformio.py
+curl -fsSL -o get-platformio.py https://gh-proxy.org/https://raw.githubusercontent.com/platformio/platformio-core-installer/master/get-platformio.py
 $STD python3 get-platformio.py
 msg_ok "Setup Platformio"
 
 msg_info "Setup TasmoCompiler"
 mkdir /tmp/Tasmota
 RELEASE=$(curl -fsSL https://api.github.com/repos/benzino77/tasmocompiler/releases/latest | grep "tag_name" | awk '{print substr($2, 3, length($2)-4) }')
-curl_download "/tmp/v${RELEASE}.tar.gz" "https://github.com/benzino77/tasmocompiler/archive/refs/tags/v${RELEASE}.tar.gz"
+curl_download "/tmp/v${RELEASE}.tar.gz" "https://gh-proxy.org/https://github.com/benzino77/tasmocompiler/archive/refs/tags/v${RELEASE}.tar.gz"
 cd /tmp
 tar xzf /tmp/v${RELEASE}.tar.gz
 mv tasmocompiler-${RELEASE}/ /opt/tasmocompiler/

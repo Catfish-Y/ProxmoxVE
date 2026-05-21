@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)
+source <(curl -fsSL https://gh-proxy.org/https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: Slaviša Arežina (tremor021)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://github.com/rustdesk/rustdesk-server
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://gh-proxy.org/https://github.com/rustdesk/rustdesk-server
 
 APP="Alpine-RustDeskServer"
 var_tags="${var_tags:-alpine;monitoring}"
@@ -34,7 +34,7 @@ function update_script() {
     $STD service rustdesk-server-hbbs stop
     $STD service rustdesk-server-hbbr stop
     temp_file1=$(mktemp)
-    curl -fsSL "https://github.com/lejianwen/rustdesk-server/releases/download/${RELEASE}/rustdesk-server-linux-amd64.zip" -o "$temp_file1"
+    curl -fsSL "https://gh-proxy.org/https://github.com/lejianwen/rustdesk-server/releases/download/${RELEASE}/rustdesk-server-linux-amd64.zip" -o "$temp_file1"
     $STD unzip "$temp_file1"
     cp -r amd64/* /opt/rustdesk-server/
     echo "${RELEASE}" >~/.rustdesk-server
@@ -50,7 +50,7 @@ function update_script() {
     msg_info "Updating RustDesk API to v${APIRELEASE}"
     $STD service rustdesk-api stop
     temp_file2=$(mktemp)
-    curl -fsSL "https://github.com/lejianwen/rustdesk-api/releases/download/v${APIRELEASE}/linux-amd64.tar.gz" -o "$temp_file2"
+    curl -fsSL "https://gh-proxy.org/https://github.com/lejianwen/rustdesk-api/releases/download/v${APIRELEASE}/linux-amd64.tar.gz" -o "$temp_file2"
     $STD tar zxvf "$temp_file2"
     cp -r release/* /opt/rustdesk-api
     echo "${APIRELEASE}" >~/.rustdesk-api

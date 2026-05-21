@@ -2,7 +2,7 @@
 
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: nicedevil007 (NiceDevil)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
 # Source: https://it-tools.tech/
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
@@ -21,7 +21,7 @@ msg_ok "Installed Dependencies"
 
 msg_info "Installing IT-Tools"
 RELEASE=$(curl -fsSL https://api.github.com/repos/sharevb/it-tools/releases/latest | grep '"tag_name":' | cut -d '"' -f4)
-curl -fsSL "https://github.com/sharevb/it-tools/releases/download/${RELEASE}/it-tools-${RELEASE#v}.zip" -o it-tools.zip
+curl -fsSL "https://gh-proxy.org/https://github.com/sharevb/it-tools/releases/download/${RELEASE}/it-tools-${RELEASE#v}.zip" -o it-tools.zip
 mkdir -p /usr/share/nginx/html
 $STD unzip it-tools.zip -d /tmp/
 mv /tmp/dist/* /usr/share/nginx/html

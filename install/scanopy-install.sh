@@ -2,8 +2,8 @@
 
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: vhsdream
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://github.com/scanopy/scanopy
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://gh-proxy.org/https://github.com/scanopy/scanopy
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
 color
@@ -55,7 +55,7 @@ SCANOPY_INTEGRATED_DAEMON_URL=http://127.0.0.1:60073
 # SCANOPY_DISABLE_REGISTRATION=true
 ## - uncomment when using TLS
 # SCANOPY_USE_SECURE_SESSION_COOKIES=true
-## - see https://github.com/imbolc/axum-client-ip?tab=readme-ov-file#configurable-vs-specific-extractors
+## - see https://gh-proxy.org/https://github.com/imbolc/axum-client-ip?tab=readme-ov-file#configurable-vs-specific-extractors
 ## - before uncommenting the below
 # SCANOPY_CLIENT_IP_SOURCE=
 
@@ -71,7 +71,7 @@ SCANOPY_BIND_ADDRESS=0.0.0.0
 SCANOPY_NAME="scanopy-daemon"
 SCANOPY_HEARTBEAT_INTERVAL=30
 
-### - see https://github.com/scanopy/scanopy/blob/main/docs/CONFIGURATION.md for more options
+### - see https://gh-proxy.org/https://github.com/scanopy/scanopy/blob/main/docs/CONFIGURATION.md for more options
 EOF
 
 cat <<EOF >/etc/systemd/system/scanopy-server.service

@@ -2,17 +2,17 @@
 
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: MickLesk (CanbiZ)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://komo.do/ | Github: https://github.com/moghtech/komodo
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://komo.do/ | Github: https://gh-proxy.org/https://github.com/moghtech/komodo
 if ! command -v curl &>/dev/null; then
   printf "\r\e[2K%b" '\033[93m Setup Source \033[m' >&2
   apt-get update >/dev/null 2>&1 || apk update >/dev/null 2>&1
   apt-get install -y curl >/dev/null 2>&1 || apk add --no-cache curl >/dev/null 2>&1
 fi
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/core.func)
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/tools.func)
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/error_handler.func)
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/api.func) 2>/dev/null || true
+source <(curl -fsSL https://gh-proxy.org/https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/core.func)
+source <(curl -fsSL https://gh-proxy.org/https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/tools.func)
+source <(curl -fsSL https://gh-proxy.org/https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/error_handler.func)
+source <(curl -fsSL https://gh-proxy.org/https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/api.func) 2>/dev/null || true
 declare -f init_tool_telemetry &>/dev/null && init_tool_telemetry "komodo" "addon"
 
 # Enable error handling
@@ -48,7 +48,7 @@ function check_legacy_db() {
     msg_error "Detected outdated Komodo setup using SQLite or PostgreSQL (FerretDB v1)."
     echo -e "${YW}This configuration is no longer supported since Komodo v1.18.0.${CL}"
     echo -e "${YW}Please follow the migration guide:${CL}"
-    echo -e "${BGN}https://github.com/community-scripts/ProxmoxVE/discussions/5689${CL}\n"
+    echo -e "${BGN}https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/discussions/5689${CL}\n"
     exit 238
   fi
 }
@@ -84,7 +84,7 @@ function update() {
   }
   cp "$COMPOSE_ENV" "${COMPOSE_ENV}.bak_$(date +%Y%m%d_%H%M%S)" 2>/dev/null || true
 
-  GITHUB_URL="https://raw.githubusercontent.com/moghtech/komodo/main/compose/${COMPOSE_BASENAME}"
+  GITHUB_URL="https://gh-proxy.org/https://raw.githubusercontent.com/moghtech/komodo/main/compose/${COMPOSE_BASENAME}"
   if ! curl -fsSL "$GITHUB_URL" -o "$COMPOSE_FILE"; then
     msg_error "Failed to download ${COMPOSE_BASENAME} from GitHub!"
     mv "$BACKUP_FILE" "$COMPOSE_FILE"
@@ -232,11 +232,11 @@ function install() {
   msg_ok "Created ${INSTALL_PATH}"
 
   msg_info "Downloading Docker Compose file"
-  curl -fsSL "https://raw.githubusercontent.com/moghtech/komodo/main/compose/$DB_COMPOSE_FILE" -o "${INSTALL_PATH}/${DB_COMPOSE_FILE}"
+  curl -fsSL "https://gh-proxy.org/https://raw.githubusercontent.com/moghtech/komodo/main/compose/$DB_COMPOSE_FILE" -o "${INSTALL_PATH}/${DB_COMPOSE_FILE}"
   msg_ok "Downloaded ${DB_COMPOSE_FILE}"
 
   msg_info "Configuring environment"
-  curl -fsSL "https://raw.githubusercontent.com/moghtech/komodo/main/compose/compose.env" -o "$COMPOSE_ENV"
+  curl -fsSL "https://gh-proxy.org/https://raw.githubusercontent.com/moghtech/komodo/main/compose/compose.env" -o "$COMPOSE_ENV"
 
   DB_PASSWORD=$(openssl rand -base64 16 | tr -d '/+=')
   ADMIN_PASSWORD=$(openssl rand -base64 8 | tr -d '/+=')

@@ -2,8 +2,8 @@
 
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: MickLesk (CanbiZ)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://actualbudget.org/ | Github: https://github.com/actualbudget/actual
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://actualbudget.org/ | Github: https://gh-proxy.org/https://github.com/actualbudget/actual
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
 color

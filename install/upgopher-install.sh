@@ -2,8 +2,8 @@
 
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: Eduardo González (wanetty)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://github.com/wanetty/upgopher
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://gh-proxy.org/https://github.com/wanetty/upgopher
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
 color
@@ -24,7 +24,7 @@ msg_info "Creating Service"
 cat <<EOF >/etc/systemd/system/upgopher.service
 [Unit]
 Description=Upgopher File Server
-Documentation=https://github.com/wanetty/upgopher
+Documentation=https://gh-proxy.org/https://github.com/wanetty/upgopher
 After=network.target
 
 [Service]

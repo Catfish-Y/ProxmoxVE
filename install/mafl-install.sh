@@ -2,8 +2,8 @@
 
 # Copyright (c) 2021-2026 tteck
 # Author: tteck (tteckster)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://mafl.hywax.space/ | Github: https://github.com/hywax/mafl
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://mafl.hywax.space/ | Github: https://gh-proxy.org/https://github.com/hywax/mafl
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
 color
@@ -24,7 +24,7 @@ fetch_and_deploy_gh_release "mafl" "hywax/mafl" "tarball"
 
 msg_info "Installing Mafl"
 mkdir -p /opt/mafl/data
-curl -fsSL "https://raw.githubusercontent.com/hywax/mafl/main/.example/config.yml" -o "/opt/mafl/data/config.yml"
+curl -fsSL "https://gh-proxy.org/https://raw.githubusercontent.com/hywax/mafl/main/.example/config.yml" -o "/opt/mafl/data/config.yml"
 cd /opt/mafl
 export NUXT_TELEMETRY_DISABLED=true
 $STD yarn install

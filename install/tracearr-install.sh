@@ -2,8 +2,8 @@
 
 # Copyright (c) 2021-2025 community-scripts ORG
 # Author: durzo
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://github.com/connorgallopo/Tracearr
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://gh-proxy.org/https://github.com/connorgallopo/Tracearr
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
 color
@@ -21,7 +21,7 @@ NODE_VERSION="24" setup_nodejs
 PG_VERSION="18" setup_postgresql
 
 msg_info "Installing pnpm"
-PNPM_VERSION="$(curl -fsSL "https://raw.githubusercontent.com/connorgallopo/Tracearr/refs/heads/main/package.json" | jq -r '.packageManager | split("@")[1]' | cut -d'+' -f1)"
+PNPM_VERSION="$(curl -fsSL "https://gh-proxy.org/https://raw.githubusercontent.com/connorgallopo/Tracearr/refs/heads/main/package.json" | jq -r '.packageManager | split("@")[1]' | cut -d'+' -f1)"
 export COREPACK_ENABLE_DOWNLOAD_PROMPT=0
 $STD corepack enable pnpm
 $STD corepack prepare pnpm@${PNPM_VERSION} --activate

@@ -2,8 +2,8 @@
 
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: kristocopani
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://github.com/glanceapp/glance
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://gh-proxy.org/https://github.com/glanceapp/glance
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
 color
@@ -34,7 +34,7 @@ pages:
                   - title: Google
                     url: https://www.google.com/
                   - title: Helper Scripts
-                    url: https://github.com/community-scripts/ProxmoxVE
+                    url: https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE
 EOF
 msg_ok "Configured Glance"
 

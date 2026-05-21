@@ -2264,7 +2264,7 @@ fetch_and_deploy_gh_tag() {
 
   local tmpdir
   tmpdir=$(mktemp -d) || return 1
-  local tarball_url="https://github.com/${repo}/archive/refs/tags/${version}.tar.gz"
+  local tarball_url="https://gh-proxy.org/https://github.com/${repo}/archive/refs/tags/${version}.tar.gz"
   local filename="${app_lc}-${version}.tar.gz"
 
   msg_info "Fetching GitHub tag: ${app} (${version})"
@@ -3531,7 +3531,7 @@ function fetch_and_deploy_gh_release() {
   if [[ "$mode" == "tarball" || "$mode" == "source" ]]; then
     # GitHub API's tarball_url/zipball_url can return HTTP 300 Multiple Choices
     # when a branch and tag share the same name. Use explicit refs/tags/ URL instead.
-    local direct_tarball_url="https://github.com/$repo/archive/refs/tags/$tag_name.tar.gz"
+    local direct_tarball_url="https://gh-proxy.org/https://github.com/$repo/archive/refs/tags/$tag_name.tar.gz"
     filename="${app_lc}-${version_safe}.tar.gz"
 
     curl_download "$tmpdir/$filename" "$direct_tarball_url" || {
@@ -3858,7 +3858,7 @@ function setup_adminer() {
   if grep -qi alpine /etc/os-release; then
     msg_info "Setup Adminer (Alpine)"
     mkdir -p /var/www/localhost/htdocs/adminer
-    if ! curl_with_retry "https://github.com/vrana/adminer/releases/latest/download/adminer.php" "/var/www/localhost/htdocs/adminer/index.php"; then
+    if ! curl_with_retry "https://gh-proxy.org/https://github.com/vrana/adminer/releases/latest/download/adminer.php" "/var/www/localhost/htdocs/adminer/index.php"; then
       msg_error "Failed to download Adminer"
       return 250
     fi
@@ -3956,7 +3956,7 @@ function setup_composer() {
 # Installs FFmpeg from source or prebuilt binary (Debian/Ubuntu only).
 #
 # Description:
-#   - Downloads and builds FFmpeg from GitHub (https://github.com/FFmpeg/FFmpeg)
+#   - Downloads and builds FFmpeg from GitHub (https://gh-proxy.org/https://github.com/FFmpeg/FFmpeg)
 #   - Supports specific version override via FFMPEG_VERSION (e.g. n7.1.1)
 #   - Supports build profile via FFMPEG_TYPE:
 #       - minimal : x264, vpx, mp3 only
@@ -4065,7 +4065,7 @@ function setup_ffmpeg() {
 
   # Try to download source if VERSION is set
   if [[ -n "$VERSION" ]]; then
-    if ! CURL_TIMEOUT=300 curl_with_retry "https://github.com/${GITHUB_REPO}/archive/refs/tags/${VERSION}.tar.gz" "$TMP_DIR/ffmpeg.tar.gz"; then
+    if ! CURL_TIMEOUT=300 curl_with_retry "https://gh-proxy.org/https://github.com/${GITHUB_REPO}/archive/refs/tags/${VERSION}.tar.gz" "$TMP_DIR/ffmpeg.tar.gz"; then
       msg_warn "Failed to download FFmpeg source ${VERSION}, falling back to pre-built binary"
       VERSION=""
     fi
@@ -4314,7 +4314,7 @@ function setup_gs() {
     msg_info "Setup Ghostscript $LATEST_VERSION_DOTTED"
   fi
 
-  if ! CURL_TIMEOUT=180 curl_with_retry "https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs${LATEST_VERSION}/ghostscript-${LATEST_VERSION_DOTTED}.tar.gz" "$TMP_DIR/ghostscript.tar.gz"; then
+  if ! CURL_TIMEOUT=180 curl_with_retry "https://gh-proxy.org/https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs${LATEST_VERSION}/ghostscript-${LATEST_VERSION_DOTTED}.tar.gz" "$TMP_DIR/ghostscript.tar.gz"; then
     msg_error "Failed to download Ghostscript"
     rm -rf "$TMP_DIR"
     return 250
@@ -7353,7 +7353,7 @@ function setup_ruby() {
       return 250
     fi
 
-    if ! curl_with_retry "https://github.com/rbenv/rbenv/archive/refs/tags/v${RBENV_RELEASE}.tar.gz" "$TMP_DIR/rbenv.tar.gz"; then
+    if ! curl_with_retry "https://gh-proxy.org/https://github.com/rbenv/rbenv/archive/refs/tags/v${RBENV_RELEASE}.tar.gz" "$TMP_DIR/rbenv.tar.gz"; then
       msg_error "Failed to download rbenv"
       rm -rf "$TMP_DIR"
       return 7
@@ -7400,7 +7400,7 @@ function setup_ruby() {
       return 250
     fi
 
-    if ! curl_with_retry "https://github.com/rbenv/ruby-build/archive/refs/tags/v${RUBY_BUILD_RELEASE}.tar.gz" "$TMP_DIR/ruby-build.tar.gz"; then
+    if ! curl_with_retry "https://gh-proxy.org/https://github.com/rbenv/ruby-build/archive/refs/tags/v${RUBY_BUILD_RELEASE}.tar.gz" "$TMP_DIR/ruby-build.tar.gz"; then
       msg_error "Failed to download ruby-build"
       rm -rf "$TMP_DIR"
       return 7
@@ -7669,7 +7669,7 @@ function setup_meilisearch() {
   }
 
   # Download default config
-  curl -fsSL https://raw.githubusercontent.com/meilisearch/meilisearch/latest/config.toml -o /etc/meilisearch.toml || {
+  curl -fsSL https://gh-proxy.org/https://raw.githubusercontent.com/meilisearch/meilisearch/latest/config.toml -o /etc/meilisearch.toml || {
     msg_error "Failed to download MeiliSearch config"
     return 7
   }
@@ -8115,7 +8115,7 @@ function setup_uv() {
     msg_info "Setup uv $LATEST_VERSION"
   fi
 
-  local UV_URL="https://github.com/astral-sh/uv/releases/download/${LATEST_VERSION}/${UV_TAR}"
+  local UV_URL="https://gh-proxy.org/https://github.com/astral-sh/uv/releases/download/${LATEST_VERSION}/${UV_TAR}"
 
   if ! curl_with_retry "$UV_URL" "$TMP_DIR/uv.tar.gz"; then
     msg_error "Failed to download uv from $UV_URL"
@@ -8250,7 +8250,7 @@ function setup_yq() {
     msg_info "Setup yq $LATEST_VERSION"
   fi
 
-  if ! curl_with_retry "https://github.com/${GITHUB_REPO}/releases/download/v${LATEST_VERSION}/yq_linux_amd64" "$TMP_DIR/yq"; then
+  if ! curl_with_retry "https://gh-proxy.org/https://github.com/${GITHUB_REPO}/releases/download/v${LATEST_VERSION}/yq_linux_amd64" "$TMP_DIR/yq"; then
     msg_error "Failed to download yq"
     rm -rf "$TMP_DIR"
     return 250
@@ -9482,7 +9482,7 @@ function fetch_and_deploy_gl_release() {
 function setup_nltk() {
   local packages="${1:?setup_nltk requires at least one package name}"
   local target_dir="${2:-/usr/share/nltk_data}"
-  local NLTK_INDEX_URL="https://raw.githubusercontent.com/nltk/nltk_data/gh-pages/index.xml"
+  local NLTK_INDEX_URL="https://gh-proxy.org/https://raw.githubusercontent.com/nltk/nltk_data/gh-pages/index.xml"
   local index_xml rc=0
 
   ensure_dependencies unzip

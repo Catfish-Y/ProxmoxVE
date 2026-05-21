@@ -2,8 +2,8 @@
 
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: MickLesk (CanbiZ)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://zotregistry.dev/ | Github: https://github.com/project-zot/zot
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://zotregistry.dev/ | Github: https://gh-proxy.org/https://github.com/project-zot/zot
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
 color
@@ -21,7 +21,7 @@ fetch_and_deploy_gh_release "zot" "project-zot/zot" "singlefile" "latest" "/usr/
 
 msg_info "Configuring Zot Registry"
 mkdir -p /etc/zot
-curl -fsSL https://raw.githubusercontent.com/project-zot/zot/refs/heads/main/examples/config-ui.json -o /etc/zot/config.json
+curl -fsSL https://gh-proxy.org/https://raw.githubusercontent.com/project-zot/zot/refs/heads/main/examples/config-ui.json -o /etc/zot/config.json
 ZOTPASSWORD=$(openssl rand -base64 18 | tr -dc 'a-zA-Z0-9' | head -c13)
 $STD htpasswd -b -B -c /etc/zot/htpasswd admin "$ZOTPASSWORD"
 {

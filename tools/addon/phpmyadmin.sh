@@ -2,8 +2,8 @@
 
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: MickLesk (CanbiZ)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://www.phpmyadmin.net/ | Github: https://github.com/phpmyadmin/phpmyadmin
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://www.phpmyadmin.net/ | Github: https://gh-proxy.org/https://github.com/phpmyadmin/phpmyadmin
 
 function header_info {
   clear
@@ -31,7 +31,7 @@ INSTALL_DIR_DEBIAN="/var/www/html/phpMyAdmin"
 INSTALL_DIR_ALPINE="/usr/share/phpmyadmin"
 
 # Telemetry
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/api.func) 2>/dev/null || true
+source <(curl -fsSL https://gh-proxy.org/https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/api.func) 2>/dev/null || true
 declare -f init_tool_telemetry &>/dev/null && init_tool_telemetry "phpmyadmin" "addon"
 
 IFACE=$(ip -4 route | awk '/default/ {print $5; exit}')

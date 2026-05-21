@@ -2,8 +2,8 @@
 
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: lucasfell
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://ghostfol.io/ | Github: https://github.com/ghostfolio/ghostfolio
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://ghostfol.io/ | Github: https://gh-proxy.org/https://github.com/ghostfolio/ghostfolio
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
 color

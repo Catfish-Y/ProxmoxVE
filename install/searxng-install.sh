@@ -2,8 +2,8 @@
 
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: MickLesk (Canbiz)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://github.com/searxng/searxng
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://gh-proxy.org/https://github.com/searxng/searxng
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
 color
@@ -34,7 +34,7 @@ chown -R searxng:searxng /usr/local/searxng
 msg_ok "User and directories ready"
 
 msg_info "Cloning SearXNG source"
-$STD sudo -H -u searxng git clone https://github.com/searxng/searxng /usr/local/searxng/searxng-src
+$STD sudo -H -u searxng git clone https://gh-proxy.org/https://github.com/searxng/searxng /usr/local/searxng/searxng-src
 msg_ok "Cloned SearXNG"
 
 msg_info "Creating Python virtual environment"

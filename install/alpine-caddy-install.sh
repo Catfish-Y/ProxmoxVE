@@ -2,7 +2,7 @@
 
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: cobalt (cobaltgit)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
 # Source: https://caddyserver.com/
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
@@ -51,7 +51,7 @@ if [[ "${prompt,,}" =~ ^(y|yes)$ ]]; then
   msg_info "Setup xCaddy"
   cd /opt
   RELEASE=$(curl -fsSL https://api.github.com/repos/caddyserver/xcaddy/releases/latest | grep "tag_name" | awk '{print substr($2, 2, length($2)-3) }')
-  curl -fsSL "https://github.com/caddyserver/xcaddy/releases/download/${RELEASE}/xcaddy_${RELEASE:1}_linux_amd64.tar.gz" -o "xcaddy_${RELEASE:1}_linux_amd64.tar.gz"
+  curl -fsSL "https://gh-proxy.org/https://github.com/caddyserver/xcaddy/releases/download/${RELEASE}/xcaddy_${RELEASE:1}_linux_amd64.tar.gz" -o "xcaddy_${RELEASE:1}_linux_amd64.tar.gz"
   $STD tar xzf xcaddy_"${RELEASE:1}"_linux_amd64.tar.gz -C /usr/local/bin xcaddy
   rm -rf /opt/xcaddy*
   $STD xcaddy build

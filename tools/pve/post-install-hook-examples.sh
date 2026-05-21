@@ -118,7 +118,7 @@ TS="$(date -Iseconds)"
 read -r -d '' DISCORD_PAYLOAD <<JSON || true
 {
   "username": "Proxmox - ${NODE}",
-  "avatar_url": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/images/logo-81x112.png",
+  "avatar_url": "https://gh-proxy.org/https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/images/logo-81x112.png",
   "embeds": [{
     "title": "✅ ${APP} LXC created",
     "description": "A new community-script LXC has been provisioned on **${NODE}**.",
@@ -293,7 +293,7 @@ case "$ARCH" in
 esac
 TMP=$(mktemp -d)
 cd "$TMP"
-curl -fsSL "https://github.com/henrygd/beszel/releases/latest/download/beszel-agent_linux_${ARCH_TAG}.tar.gz" \
+curl -fsSL "https://gh-proxy.org/https://github.com/henrygd/beszel/releases/latest/download/beszel-agent_linux_${ARCH_TAG}.tar.gz" \
   | tar -xz
 install -m 0755 beszel-agent /usr/local/bin/beszel-agent
 

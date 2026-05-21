@@ -2,8 +2,8 @@
 
 # Copyright (c) 2021-2026 tteck
 # Author: tteck (tteckster)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://www.nocodb.com/ | Github: https://github.com/nocodb/nocodb
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://www.nocodb.com/ | Github: https://gh-proxy.org/https://github.com/nocodb/nocodb
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
 color

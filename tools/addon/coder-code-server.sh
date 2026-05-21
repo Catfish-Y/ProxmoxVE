@@ -2,8 +2,8 @@
 
 # Copyright (c) 2021-2026 tteck
 # Author: tteck (tteckster)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://coder.com/ | Github: https://github.com/coder/code-server
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://coder.com/ | Github: https://gh-proxy.org/https://github.com/coder/code-server
 
 function header_info {
   cat <<"EOF"
@@ -30,7 +30,7 @@ APP="Coder Code Server"
 hostname="$(hostname)"
 
 # Telemetry
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/api.func) 2>/dev/null || true
+source <(curl -fsSL https://gh-proxy.org/https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/api.func) 2>/dev/null || true
 declare -f init_tool_telemetry &>/dev/null && init_tool_telemetry "coder-code-server" "addon"
 
 set -o errexit
@@ -96,7 +96,7 @@ if [ -f "$config_path" ]; then
   preexisting_config=true
 fi
 
-curl -fOL https://github.com/coder/code-server/releases/download/v"$VERSION"/code-server_"${VERSION}"_amd64.deb &>/dev/null
+curl -fOL https://gh-proxy.org/https://github.com/coder/code-server/releases/download/v"$VERSION"/code-server_"${VERSION}"_amd64.deb &>/dev/null
 dpkg -i code-server_"${VERSION}"_amd64.deb &>/dev/null
 rm -rf code-server_"${VERSION}"_amd64.deb
 mkdir -p "${HOME}/.config/code-server/"

@@ -2,8 +2,8 @@
 
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: madelyn (DysfunctionalProgramming)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://komga.org/ | Github: https://github.com/gotson/komga
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://komga.org/ | Github: https://gh-proxy.org/https://github.com/gotson/komga
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
 color

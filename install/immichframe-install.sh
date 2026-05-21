@@ -2,8 +2,8 @@
 
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: Thiago Canozzo Lahr (tclahr)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://github.com/immichFrame/ImmichFrame
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://gh-proxy.org/https://github.com/immichFrame/ImmichFrame
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
 color
@@ -45,7 +45,7 @@ $STD npm run build
 cp -r build/* /opt/immichframe/wwwroot
 rm -rf /tmp/immichframe
 mkdir -p /opt/immichframe/Config
-curl -fsSL "https://raw.githubusercontent.com/immichFrame/ImmichFrame/main/docker/Settings.example.yml" -o /opt/immichframe/Config/Settings.yml
+curl -fsSL "https://gh-proxy.org/https://raw.githubusercontent.com/immichFrame/ImmichFrame/main/docker/Settings.example.yml" -o /opt/immichframe/Config/Settings.yml
 useradd -r -s /sbin/nologin -d /opt/immichframe -M immichframe
 chown -R immichframe:immichframe /opt/immichframe
 msg_ok "Setup ImmichFrame"

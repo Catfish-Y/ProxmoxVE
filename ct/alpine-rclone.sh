@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)
+source <(curl -fsSL https://gh-proxy.org/https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: Slaviša Arežina (tremor021)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://github.com/rclone/rclone
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://gh-proxy.org/https://github.com/rclone/rclone
 
 APP="Alpine-rclone"
 var_tags="${var_tags:-alpine;backup}"
@@ -30,7 +30,7 @@ function update_script() {
   if [ "${RELEASE}" != "$(cat /opt/rclone_version.txt)" ] || [ ! -f /opt/rclone_version.txt ]; then
     msg_info "Updating ${APP} LXC"
     temp_file=$(mktemp)
-    curl -fsSL "https://github.com/rclone/rclone/releases/download/v${RELEASE}/rclone-v${RELEASE}-linux-amd64.zip" -o "$temp_file"
+    curl -fsSL "https://gh-proxy.org/https://github.com/rclone/rclone/releases/download/v${RELEASE}/rclone-v${RELEASE}-linux-amd64.zip" -o "$temp_file"
     $STD unzip -o "$temp_file" '*/**' -d /opt/rclone
     rm -f "$temp_file"
     echo "${RELEASE}" >/opt/rclone_version.txt

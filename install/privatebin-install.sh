@@ -2,8 +2,8 @@
 
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: Nícolas Pastorello (opastorello)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://privatebin.info/ | Github: https://github.com/PrivateBin/PrivateBin
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://privatebin.info/ | Github: https://gh-proxy.org/https://github.com/PrivateBin/PrivateBin
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
 color

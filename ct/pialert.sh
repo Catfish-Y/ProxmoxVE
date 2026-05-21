@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)
+source <(curl -fsSL https://gh-proxy.org/https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)
 # Copyright (c) 2021-2026 tteck
 # Author: tteck (tteckster)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://github.com/leiweibau/Pi.Alert/
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://gh-proxy.org/https://github.com/leiweibau/Pi.Alert/
 
 APP="PiAlert"
 var_tags="${var_tags:-network}"
@@ -29,7 +29,7 @@ function update_script() {
   fi
 
   msg_info "Updating PiAlert"
-  bash -c "$(curl -fsSL https://github.com/leiweibau/Pi.Alert/raw/main/install/pialert_update.sh)" -s --lxc
+  bash -c "$(curl -fsSL https://gh-proxy.org/https://github.com/leiweibau/Pi.Alert/raw/main/install/pialert_update.sh)" -s --lxc
   msg_ok "Updated PiAlert"
   msg_ok "Updated successfully!"
   exit

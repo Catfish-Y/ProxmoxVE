@@ -2,8 +2,8 @@
 
 # Copyright (c) 2021-2026 tteck
 # Author: tteck (tteckster)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://github.com/dani-garcia/vaultwarden
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://gh-proxy.org/https://github.com/dani-garcia/vaultwarden
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
 color
@@ -68,7 +68,7 @@ msg_info "Creating Service"
 cat <<EOF >/etc/systemd/system/vaultwarden.service
 [Unit]
 Description=Bitwarden Server (Powered by Vaultwarden)
-Documentation=https://github.com/dani-garcia/vaultwarden
+Documentation=https://gh-proxy.org/https://github.com/dani-garcia/vaultwarden
 After=network.target
 
 [Service]

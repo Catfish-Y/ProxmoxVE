@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)
+source <(curl -fsSL https://gh-proxy.org/https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: Michel Roegl-Brunner (michelroegl-brunner)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://snipeitapp.com/ | Github: https://github.com/grokability/snipe-it
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://snipeitapp.com/ | Github: https://gh-proxy.org/https://github.com/grokability/snipe-it
 
 APP="SnipeIT"
 var_tags="${var_tags:-asset-management;foss}"

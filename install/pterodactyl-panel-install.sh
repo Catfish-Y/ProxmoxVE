@@ -2,8 +2,8 @@
 
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: bvdberg01
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://github.com/pterodactyl/panel
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://gh-proxy.org/https://github.com/pterodactyl/panel
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
 color
@@ -67,7 +67,7 @@ msg_info "Installing pterodactyl Panel"
 RELEASE=$(curl -fsSL https://api.github.com/repos/pterodactyl/panel/releases/latest | grep "tag_name" | awk '{print substr($2, 3, length($2)-4) }')
 mkdir /opt/pterodactyl-panel
 cd /opt/pterodactyl-panel
-curl -fsSL "https://github.com/pterodactyl/panel/releases/download/v${RELEASE}/panel.tar.gz" -o "panel.tar.gz"
+curl -fsSL "https://gh-proxy.org/https://github.com/pterodactyl/panel/releases/download/v${RELEASE}/panel.tar.gz" -o "panel.tar.gz"
 tar -xzf "panel.tar.gz"
 cp .env.example .env
 ADMIN_PASS=$(openssl rand -base64 18 | tr -dc 'a-zA-Z0-9' | head -c13)

@@ -2,7 +2,7 @@
 
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: MickLesk (CanbiZ)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
 # Source: https://adguardhome.com/
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
@@ -15,7 +15,7 @@ update_os
 
 msg_info "Downloading AdGuard Home"
 $STD curl -fsSL -o /tmp/AdGuardHome_linux_amd64.tar.gz \
-  "https://github.com/AdguardTeam/AdGuardHome/releases/latest/download/AdGuardHome_linux_amd64.tar.gz"
+  "https://gh-proxy.org/https://github.com/AdguardTeam/AdGuardHome/releases/latest/download/AdGuardHome_linux_amd64.tar.gz"
 msg_ok "Downloaded AdGuard Home"
 
 msg_info "Installing AdGuard Home"

@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)
+source <(curl -fsSL https://gh-proxy.org/https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: MickLesk (CanbiZ)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://github.com/Termix-SSH/Termix
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://gh-proxy.org/https://github.com/Termix-SSH/Termix
 
 APP="Termix"
 var_tags="${var_tags:-ssh;terminal;management}"
@@ -197,7 +197,7 @@ EOF
     if [[ "${REPLY,,}" =~ ^(y|yes|)$ ]]; then
       msg_info "Updating Nginx Configuration"
       cp /etc/nginx/nginx.conf /etc/nginx/nginx.conf.bak
-      curl -fsSL "https://raw.githubusercontent.com/Termix-SSH/Termix/main/docker/nginx.conf" -o /etc/nginx/nginx.conf
+      curl -fsSL "https://gh-proxy.org/https://raw.githubusercontent.com/Termix-SSH/Termix/main/docker/nginx.conf" -o /etc/nginx/nginx.conf
       sed -i '/^master_process/d' /etc/nginx/nginx.conf
       sed -i 's|pid /tmp/nginx/nginx.pid;|pid /run/nginx.pid;|' /etc/nginx/nginx.conf
       sed -i 's|error_log /tmp/nginx/error.log|error_log /var/log/nginx/error.log|' /etc/nginx/nginx.conf

@@ -2,8 +2,8 @@
 
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: MickLesk (CanbiZ)
-# License: MIT |  https://github.com/tteck/Proxmox/raw/main/LICENSE
-# Source: https://github.com/odoo/odoo
+# License: MIT |  https://gh-proxy.org/https://github.com/tteck/Proxmox/raw/main/LICENSE
+# Source: https://gh-proxy.org/https://github.com/odoo/odoo
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
 color

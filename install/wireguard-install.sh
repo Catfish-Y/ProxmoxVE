@@ -2,7 +2,7 @@
 
 # Copyright (c) 2021-2026 tteck
 # Author: tteck (tteckster)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
 # Source: https://www.wireguard.com/
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
@@ -25,7 +25,7 @@ msg_ok "Installed WireGuard"
 
 read -r -p "${TAB3}Would you like to add WGDashboard? <y/N> " prompt
 if [[ "${prompt,,}" =~ ^(y|yes)$ ]]; then
-  git clone -q https://github.com/WGDashboard/WGDashboard.git /etc/wgdashboard
+  git clone -q https://gh-proxy.org/https://github.com/WGDashboard/WGDashboard.git /etc/wgdashboard
 
   msg_info "Installing WGDashboard"
   cd /etc/wgdashboard/src

@@ -3,8 +3,8 @@
 # Copyright (c) 2021-2026 tteck
 # Author: tteck (tteckster)
 # Co-Author: MickLesk (Canbiz)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://github.com/pymedusa/Medusa
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://gh-proxy.org/https://github.com/pymedusa/Medusa
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
 color
@@ -28,7 +28,7 @@ rm /etc/apt/sources.list.d/non-free.list
 msg_ok "Installed Dependencies"
 
 msg_info "Installing Medusa"
-$STD git clone https://github.com/pymedusa/Medusa.git /opt/medusa
+$STD git clone https://gh-proxy.org/https://github.com/pymedusa/Medusa.git /opt/medusa
 msg_ok "Installed Medusa"
 
 msg_info "Creating Service"

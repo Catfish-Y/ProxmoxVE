@@ -2,8 +2,8 @@
 
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: michelroegl-brunner
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://www.librenms.org/ | Github: https://github.com/librenms/librenms
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://www.librenms.org/ | Github: https://gh-proxy.org/https://github.com/librenms/librenms
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
 color
@@ -131,7 +131,7 @@ $STD su - librenms -s /bin/bash -c "cd /opt/librenms && lnms user:add -p ${APP_P
 RANDOM_STRING=$(openssl rand -base64 16 | tr -dc 'a-zA-Z0-9')
 sed -i "s/RANDOMSTRINGHERE/$RANDOM_STRING/g" /etc/snmp/snmpd.conf
 echo "SNMP Community String: $RANDOM_STRING" >>~/librenms.creds
-curl -qso /usr/bin/distro https://raw.githubusercontent.com/librenms/librenms-agent/master/snmp/distro
+curl -qso /usr/bin/distro https://gh-proxy.org/https://raw.githubusercontent.com/librenms/librenms-agent/master/snmp/distro
 chmod +x /usr/bin/distro
 systemctl enable -q --now snmpd
 

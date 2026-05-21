@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)
+source <(curl -fsSL https://gh-proxy.org/https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: bvdberg01 | CanbiZ
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://github.com/karlomikus/bar-assistant
-# Source: https://github.com/karlomikus/vue-salt-rim
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://gh-proxy.org/https://github.com/karlomikus/bar-assistant
+# Source: https://gh-proxy.org/https://github.com/karlomikus/vue-salt-rim
 # Source: https://www.meilisearch.com/
 
 APP="Bar-Assistant"

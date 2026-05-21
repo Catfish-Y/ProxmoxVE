@@ -2,18 +2,18 @@
 
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: CrazyWolf13
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://github.com/xperimental/nextcloud-exporter
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://gh-proxy.org/https://github.com/xperimental/nextcloud-exporter
 
 if ! command -v curl &>/dev/null; then
   printf "\r\e[2K%b" '\033[93m Setup Source \033[m' >&2
   apt-get update >/dev/null 2>&1
   apt-get install -y curl >/dev/null 2>&1
 fi
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/core.func)
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/tools.func)
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/error_handler.func)
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/api.func) 2>/dev/null || true
+source <(curl -fsSL https://gh-proxy.org/https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/core.func)
+source <(curl -fsSL https://gh-proxy.org/https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/tools.func)
+source <(curl -fsSL https://gh-proxy.org/https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/error_handler.func)
+source <(curl -fsSL https://gh-proxy.org/https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/api.func) 2>/dev/null || true
 declare -f init_tool_telemetry &>/dev/null && init_tool_telemetry "nextcloud-exporter" "addon"
 
 # Enable error handling
@@ -109,7 +109,7 @@ function install() {
 
   msg_info "Creating configuration"
   cat <<EOF >"$CONFIG_PATH"
-# https://github.com/xperimental/nextcloud-exporter
+# https://gh-proxy.org/https://github.com/xperimental/nextcloud-exporter
 NEXTCLOUD_SERVER="${NEXTCLOUD_SERVER}"
 NEXTCLOUD_AUTH_TOKEN="${NEXTCLOUD_AUTH_TOKEN:-}"
 NEXTCLOUD_USERNAME="${NEXTCLOUD_USERNAME:-}"
@@ -146,7 +146,7 @@ EOF
   cat <<'UPDATEEOF' >/usr/local/bin/update_nextcloud-exporter
 #!/usr/bin/env bash
 # nextcloud-exporter Update Script
-type=update bash -c "$(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/tools/addon/nextcloud-exporter.sh)"
+type=update bash -c "$(curl -fsSL https://gh-proxy.org/https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/tools/addon/nextcloud-exporter.sh)"
 UPDATEEOF
   chmod +x /usr/local/bin/update_nextcloud-exporter
   msg_ok "Created update script (/usr/local/bin/update_nextcloud-exporter)"

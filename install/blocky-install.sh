@@ -2,8 +2,8 @@
 
 # Copyright (c) 2021-2026 tteck
 # Author: tteck (tteckster)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://0xerr0r.github.io/blocky | Github: https://github.com/0xERR0R/blocky
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://0xerr0r.github.io/blocky | Github: https://gh-proxy.org/https://github.com/0xERR0R/blocky
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
 color
@@ -38,7 +38,7 @@ blocking:
   # definition of denylist groups. Can be external link (http/https) or local file
   denylists:
     ads:
-      - https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
+      - https://gh-proxy.org/https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
   # definition: which groups should be applied for which client
   clientGroupsBlock:
     # default will be used, if no special definition for a client name exists

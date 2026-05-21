@@ -2,8 +2,8 @@
 
 # Copyright (c) 2021-2026 tteck
 # Author: tteck (tteckster)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://github.com/motioneye-project/motioneye
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://gh-proxy.org/https://github.com/motioneye-project/motioneye
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
 color
@@ -40,16 +40,16 @@ msg_ok "Installed FFmpeg"
 
 msg_info "Installing MotionEye"
 $STD apt update
-$STD pip install git+https://github.com/motioneye-project/motioneye.git@dev
+$STD pip install git+https://gh-proxy.org/https://github.com/motioneye-project/motioneye.git@dev
 mkdir -p /etc/motioneye
 chown -R root:root /etc/motioneye
 chmod -R 777 /etc/motioneye
-curl -fsSL "https://raw.githubusercontent.com/motioneye-project/motioneye/dev/motioneye/extra/motioneye.conf.sample" -o "/etc/motioneye/motioneye.conf"
+curl -fsSL "https://gh-proxy.org/https://raw.githubusercontent.com/motioneye-project/motioneye/dev/motioneye/extra/motioneye.conf.sample" -o "/etc/motioneye/motioneye.conf"
 mkdir -p /var/lib/motioneye
 msg_ok "Installed MotionEye"
 
 msg_info "Creating Service"
-curl -fsSL "https://raw.githubusercontent.com/motioneye-project/motioneye/dev/motioneye/extra/motioneye.systemd" -o "/etc/systemd/system/motioneye.service"
+curl -fsSL "https://gh-proxy.org/https://raw.githubusercontent.com/motioneye-project/motioneye/dev/motioneye/extra/motioneye.systemd" -o "/etc/systemd/system/motioneye.service"
 sed -i 's/^User=.*/User=root/' /etc/systemd/system/motioneye.service
 systemctl enable -q --now motioneye
 msg_ok "Created Service"

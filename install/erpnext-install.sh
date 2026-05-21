@@ -2,8 +2,8 @@
 
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: MickLesk (CanbiZ)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://github.com/frappe/erpnext
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://gh-proxy.org/https://github.com/frappe/erpnext
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
 color
@@ -50,7 +50,7 @@ $STD systemctl restart mariadb
 msg_ok "Configured MariaDB for ERPNext"
 
 msg_info "Installing wkhtmltopdf"
-WKHTMLTOPDF_URL="https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6.1-3/wkhtmltox_0.12.6.1-3.bookworm_amd64.deb"
+WKHTMLTOPDF_URL="https://gh-proxy.org/https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6.1-3/wkhtmltox_0.12.6.1-3.bookworm_amd64.deb"
 $STD curl -fsSL -o /tmp/wkhtmltox.deb "$WKHTMLTOPDF_URL"
 $STD apt install -y /tmp/wkhtmltox.deb
 rm -f /tmp/wkhtmltox.deb

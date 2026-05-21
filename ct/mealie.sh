@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)
+source <(curl -fsSL https://gh-proxy.org/https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: MickLesk (CanbiZ)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://mealie.io | Github: https://github.com/mealie-recipes/mealie
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://mealie.io | Github: https://gh-proxy.org/https://github.com/mealie-recipes/mealie
 
 APP="Mealie"
 var_tags="${var_tags:-recipes}"
@@ -67,7 +67,7 @@ STARTEOF
     msg_info "Building Frontend"
     MEALIE_VERSION=$(<$HOME/.mealie)
     SITE_SETTINGS=$(find /opt/mealie/frontend -name "site-settings.vue" -path "*/admin/*" | head -1)
-    $STD sed -i "s|https://github.com/mealie-recipes/mealie/commit/|https://github.com/mealie-recipes/mealie/releases/tag/|g" "$SITE_SETTINGS"
+    $STD sed -i "s|https://gh-proxy.org/https://github.com/mealie-recipes/mealie/commit/|https://gh-proxy.org/https://github.com/mealie-recipes/mealie/releases/tag/|g" "$SITE_SETTINGS"
     $STD sed -i "s|value: data.buildId,|value: \"v${MEALIE_VERSION}\",|g" "$SITE_SETTINGS"
     $STD sed -i "s|value: data.production ? i18n.t(\"about.production\") : i18n.t(\"about.development\"),|value: \"bare-metal\",|g" "$SITE_SETTINGS"
     export NUXT_TELEMETRY_DISABLED=1

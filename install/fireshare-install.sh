@@ -2,8 +2,8 @@
 
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: Slaviša Arežina (tremor021)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://github.com/ShaneIsrael/fireshare
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://gh-proxy.org/https://github.com/ShaneIsrael/fireshare
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
 color
@@ -56,7 +56,7 @@ msg_ok "Compiled SVT-AV1"
 
 msg_info "Installing NVDEC headers"
 cd /tmp
-$STD git clone --depth 1 --branch n12.1.14.0 https://github.com/FFmpeg/nv-codec-headers.git
+$STD git clone --depth 1 --branch n12.1.14.0 https://gh-proxy.org/https://github.com/FFmpeg/nv-codec-headers.git
 cd nv-codec-headers
 $STD make install
 $STD ldconfig

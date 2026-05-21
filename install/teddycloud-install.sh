@@ -2,8 +2,8 @@
 
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: Dominik Siebel (dsiebel)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://github.com/toniebox-reverse-engineering/teddycloud
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://gh-proxy.org/https://github.com/toniebox-reverse-engineering/teddycloud
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
 color

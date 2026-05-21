@@ -2,8 +2,8 @@
 
 # Copyright (c) 2021-2026 tteck
 # Author: tteck (tteckster)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
-# Source: https://umami.is/ | Github: https://github.com/umami-software/umami
+# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Source: https://umami.is/ | Github: https://gh-proxy.org/https://github.com/umami-software/umami
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
 color
