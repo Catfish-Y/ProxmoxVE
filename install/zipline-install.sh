@@ -3,7 +3,7 @@
 # Copyright (c) 2021-2026 tteck
 # Author: tteck
 # Co-Author: MickLesk (Canbiz)
-# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# License: MIT | https://gh-proxy.org/https://github.com/Catfish-Y/ProxmoxVE/raw/main/LICENSE
 # Source: https://gh-proxy.org/https://github.com/diced/zipline
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"

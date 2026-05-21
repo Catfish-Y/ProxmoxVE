@@ -2,7 +2,7 @@
 
 # Copyright (c) 2021-2026 community-scripts ORG
 # Authors: MickLesk (CanbiZ) | Co-Authors: remz1337
-# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# License: MIT | https://gh-proxy.org/https://github.com/Catfish-Y/ProxmoxVE/raw/main/LICENSE
 # Source: https://frigate.video/ | Github: https://gh-proxy.org/https://github.com/blakeblackshear/frigate
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"

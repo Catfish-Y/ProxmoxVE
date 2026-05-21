@@ -2,7 +2,7 @@
 
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: fabrice1236
-# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# License: MIT | https://gh-proxy.org/https://github.com/Catfish-Y/ProxmoxVE/raw/main/LICENSE
 # Source: https://ghost.org/ | Github: https://gh-proxy.org/https://github.com/TryGhost/Ghost
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"

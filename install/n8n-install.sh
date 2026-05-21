@@ -2,7 +2,7 @@
 
 # Copyright (c) 2021-2026 tteck
 # Author: tteck (tteckster) | Co-Author: CrazyWolf13
-# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# License: MIT | https://gh-proxy.org/https://github.com/Catfish-Y/ProxmoxVE/raw/main/LICENSE
 # Source: https://n8n.io/ | Github: https://gh-proxy.org/https://github.com/n8n-io/n8n
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"

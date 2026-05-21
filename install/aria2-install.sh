@@ -2,7 +2,7 @@
 
 # Copyright (c) 2021-2026 tteck
 # Author: tteck (tteckster)
-# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# License: MIT | https://gh-proxy.org/https://github.com/Catfish-Y/ProxmoxVE/raw/main/LICENSE
 # Source: https://aria2.github.io/ | Github: https://gh-proxy.org/https://github.com/aria2/aria2
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"

@@ -2,7 +2,7 @@
 
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: MickLesk (CanbiZ)
-# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# License: MIT | https://gh-proxy.org/https://github.com/Catfish-Y/ProxmoxVE/raw/main/LICENSE
 # Source: https://release-argus.io/ | Github: https://gh-proxy.org/https://github.com/release-argus/Argus
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
@@ -57,9 +57,9 @@ service:
       url: community-scripts/ProxmoxVE
       use_prerelease: false
     dashboard:
-      icon: https://gh-proxy.org/https://raw.githubusercontent.com/community-scripts/ProxmoxVE/refs/heads/main/misc/images/logo.png
+      icon: https://gh-proxy.org/https://raw.githubusercontent.com/Catfish-Y/ProxmoxVE/refs/heads/main/misc/images/logo.png
       icon_link_to: https://community-scripts.org/
-      web_url: https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/releases
+      web_url: https://gh-proxy.org/https://github.com/Catfish-Y/ProxmoxVE/releases
 EOF
 msg_ok "Setup Config"
 

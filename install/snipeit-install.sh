@@ -2,7 +2,7 @@
 
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: Michel Roegl-Brunner (michelroegl-brunner)
-# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# License: MIT | https://gh-proxy.org/https://github.com/Catfish-Y/ProxmoxVE/raw/main/LICENSE
 # Source: https://snipeitapp.com/ | Github: https://gh-proxy.org/https://github.com/grokability/snipe-it
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"

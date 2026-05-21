@@ -2,7 +2,7 @@
 
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: bvdberg01
-# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# License: MIT | https://gh-proxy.org/https://github.com/Catfish-Y/ProxmoxVE/raw/main/LICENSE
 # Source: https://koillection.github.io/ | Github: https://gh-proxy.org/https://github.com/benjaminjonard/koillection
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"

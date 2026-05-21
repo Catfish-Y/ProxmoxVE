@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: aendel
-# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# License: MIT | https://gh-proxy.org/https://github.com/Catfish-Y/ProxmoxVE/raw/main/LICENSE
 # Source: https://gh-proxy.org/https://github.com/nightscout/cgm-remote-monitor
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"

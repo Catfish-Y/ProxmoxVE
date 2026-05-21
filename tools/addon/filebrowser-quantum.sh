@@ -2,7 +2,7 @@
 
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: MickLesk
-# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# License: MIT | https://gh-proxy.org/https://github.com/Catfish-Y/ProxmoxVE/raw/main/LICENSE
 # Source: https://gh-proxy.org/https://github.com/filebrowserspace/quantum
 
 function header_info() {
@@ -34,7 +34,7 @@ SRC_DIR="/"
 TMP_BIN="/tmp/filebrowser.$$"
 
 # Telemetry
-source <(curl -fsSL https://gh-proxy.org/https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/api.func) 2>/dev/null || true
+source <(curl -fsSL https://gh-proxy.org/https://raw.githubusercontent.com/Catfish-Y/ProxmoxVE/main/misc/api.func) 2>/dev/null || true
 declare -f init_tool_telemetry &>/dev/null && init_tool_telemetry "filebrowser-quantum" "addon"
 
 # Get primary IP

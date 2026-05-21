@@ -2,7 +2,7 @@
 
 # Copyright (c) 2021-2026 tteck
 # Author: tteck | Co-Author: havardthom | Co-Author: Slaviša Arežina (tremor021)
-# License: MIT | https://gh-proxy.org/https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# License: MIT | https://gh-proxy.org/https://github.com/Catfish-Y/ProxmoxVE/raw/main/LICENSE
 # Source: https://openwebui.com/
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
